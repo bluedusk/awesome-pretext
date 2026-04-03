@@ -130,6 +130,12 @@ Last auto-updated: 2026-04-03
 | **Face x Pretext** | sachinkasana | TensorFlow.js face tracking drives real-time Pretext typography | [![GitHub](https://img.shields.io/github/stars/sachinkasana/pretext-demo?style=flat-square)](https://github.com/sachinkasana/pretext-demo) |
 | **DOM vs Pretext** | clawsuo-web | Side-by-side performance comparison between DOM layout and Pretext | [![GitHub](https://img.shields.io/github/stars/clawsuo-web/pretext-demo?style=flat-square)](https://github.com/clawsuo-web/pretext-demo) |
 
+### Emerging Demos
+
+<!-- DEMOS_AUTO_START -->
+*No new demos found this cycle.*
+<!-- DEMOS_AUTO_END -->
+
 ### Live Demos
 
 - [Official Pretext Demos](https://chenglou.me/pretext/) — Accordion, bubbles, dynamic layout, ASCII art from Cheng Lou.
@@ -153,6 +159,14 @@ High-star GitHub projects built with or extending Pretext. Star counts and activ
 | [pretext-video](https://github.com/fifteen42/pretext-video) | ![Stars](https://img.shields.io/github/stars/fifteen42/pretext-video?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/fifteen42/pretext-video?style=flat-square) | Webcam into living typography via Pretext + MediaPipe |
 | [pretext-playground](https://github.com/0xNyk/pretext-playground) | ![Stars](https://img.shields.io/github/stars/0xNyk/pretext-playground?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/0xNyk/pretext-playground?style=flat-square) | Interactive ASCII dragon playground with physics |
 | [pretext-demos](https://github.com/somnai-dreams/pretext-demos) | ![Stars](https://img.shields.io/github/stars/somnai-dreams/pretext-demos?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/somnai-dreams/pretext-demos?style=flat-square) | Five polished layout engine demos |
+
+### Emerging Projects
+
+<!-- PROJECTS_AUTO_START -->
+| Project | Stars | Last Commit | Score | Description |
+|---------|-------|-------------|-------|-------------|
+| [pretext](https://github.com/chenglou/pretext) | 35027 | ![](https://img.shields.io/github/last-commit/chenglou/pretext?style=flat-square) | 7.8 |  |
+<!-- PROJECTS_AUTO_END -->
 
 ---
 
@@ -224,6 +238,16 @@ const { height, lineCount } = layout(prepared, containerWidth, lineHeight)
 - [thoughts.md](https://github.com/chenglou/pretext/blob/main/thoughts.md) — Cheng Lou's design thoughts and reflections.
 - [DeepWiki: chenglou/pretext](https://deepwiki.com/chenglou/pretext) — AI-generated wiki with architecture deep dives.
 
+### Latest Tutorials & Courses
+
+<!-- TUTORIALS_AUTO_START -->
+*No new tutorials found this cycle.*
+<!-- TUTORIALS_AUTO_END -->
+
+<!-- COURSES_AUTO_START -->
+*No new courses found this cycle.*
+<!-- COURSES_AUTO_END -->
+
 ---
 
 ## Articles & Blog Posts
@@ -239,6 +263,12 @@ const { height, lineCount } = layout(prepared, containerWidth, lineHeight)
 - [Simon Willison on Pretext](https://simonwillison.net/2026/Mar/29/pretext/) — Simon Willison's take.
 - [Reid Burke on Pretext](https://reidburke.com/updates/2026/03/pretext/) — Reid Burke's notes.
 
+### Latest Articles
+
+<!-- ARTICLES_AUTO_START -->
+*No new articles found this cycle.*
+<!-- ARTICLES_AUTO_END -->
+
 ---
 
 ## Videos & Talks
@@ -247,6 +277,12 @@ const { height, lineCount } = layout(prepared, containerWidth, lineHeight)
 
 - [Hacker News Discussion](https://news.ycombinator.com/item?id=47556290) — Community discussion with deep technical insights from the launch thread.
 - [Linus Ekenstam on Threads](https://www.threads.com/@linusekenstam/post/DWcPyttiDLO/) — "This changes the internet at its core" — commentary from a design perspective.
+
+### Latest Videos
+
+<!-- VIDEOS_AUTO_START -->
+*No new videos found this cycle.*
+<!-- VIDEOS_AUTO_END -->
 
 ---
 

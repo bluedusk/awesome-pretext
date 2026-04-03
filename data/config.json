@@ -1,0 +1,57 @@
+{
+  "search_queries": {
+    "github": [
+      "pretext chenglou",
+      "pretext text layout",
+      "pretext canvas DOM-free",
+      "@chenglou/pretext"
+    ],
+    "hackernews": [
+      "pretext chenglou",
+      "pretext text layout",
+      "pretext DOM-free"
+    ],
+    "reddit": [
+      "pretext chenglou",
+      "pretext text layout library",
+      "chenglou pretext"
+    ],
+    "web": [
+      "pretext chenglou demo",
+      "pretext text layout tutorial",
+      "pretext DOM-free guide",
+      "pretext canvas text engine",
+      "@chenglou/pretext course"
+    ]
+  },
+  "scoring_weights": {
+    "relevance": 0.25,
+    "popularity": 0.20,
+    "freshness": 0.20,
+    "activity": 0.15,
+    "quality": 0.15,
+    "authority": 0.05
+  },
+  "thresholds": {
+    "auto_include": 7,
+    "suggest_review": 4,
+    "skip": 4
+  },
+  "categories": [
+    "demo",
+    "community-project",
+    "tutorial",
+    "article",
+    "course",
+    "video",
+    "tool"
+  ],
+  "excluded_repos": [
+    "PreTeXtBook/pretext",
+    "L4bF0x/PhishingPretexts",
+    "pretext-project/pretext-project.github.io"
+  ],
+  "max_results_per_source": 50,
+  "min_stars_for_project": 5,
+  "freshness_decay_days": 180
+}

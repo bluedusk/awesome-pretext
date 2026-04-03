@@ -1,0 +1,33 @@
+name: Daily Auto-Update
+
+on:
+  schedule:
+    - cron: '0 8 * * *' # Every day at 8am UTC
+  workflow_dispatch: # Manual trigger
+
+permissions:
+  contents: write
+  pull-requests: write
+
+env:
+  ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+  GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+  GOOGLE_CSE_ID: ${{ secrets.GOOGLE_CSE_ID }}
+  SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Collect, evaluate, and create PR
+        run: node scripts/update.mjs --create-pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
