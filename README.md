@@ -21,7 +21,7 @@
 
 > Pretext is a 15KB, zero-dependency TypeScript library that measures and positions text using Canvas with pure-arithmetic reflows. No DOM, no WASM — just math.
 
-Last auto-updated: 2026-04-03
+Last auto-updated: 2026-04-03 (via `/awesome-pretext-update`)
 
 ## Contents
 
@@ -133,7 +133,13 @@ Last auto-updated: 2026-04-03
 ### Emerging Demos
 
 <!-- DEMOS_AUTO_START -->
-*No new demos found this cycle.*
+| Demo | Author | Description | Repo |
+|------|--------|-------------|------|
+| **TypeBeat** | Alexander Chen | A drum machine entirely made of text — each character triggers a sound. Built with Pretext + Gemini. | [X post](https://x.com/alexanderchen/status/2038727366734987763) |
+| **Typexperiments** | pablostanley | Kinetic typography engine — smooth per-character text animations on Canvas | [![GitHub](https://img.shields.io/github/stars/pablostanley/typexperiments?style=flat-square)](https://github.com/pablostanley/typexperiments) |
+| **BioMap** | Kevin Ho | 52 biomarker blocks that expand and reflow text every frame — 0.04ms for all 52 layouts | [X post](https://x.com/kho/status/2038160195571102068) |
+| **Pretext Wars** | jameslcowan | Space-themed game — destroy poetry with your spaceship | [![GitHub](https://img.shields.io/github/stars/jameslcowan/pretext-wars?style=flat-square)](https://github.com/jameslcowan/pretext-wars) |
+| **Pretext Slides** | ShipItAndPray | Presentation tool rendering slides in Canvas with Pretext — write markdown, present anywhere | [![GitHub](https://img.shields.io/github/stars/ShipItAndPray/pretext-slides?style=flat-square)](https://github.com/ShipItAndPray/pretext-slides) |
 <!-- DEMOS_AUTO_END -->
 
 ### Live Demos
@@ -163,9 +169,11 @@ High-star GitHub projects built with or extending Pretext. Star counts and activ
 ### Emerging Projects
 
 <!-- PROJECTS_AUTO_START -->
-| Project | Stars | Last Commit | Score | Description |
-|---------|-------|-------------|-------|-------------|
-| [pretext](https://github.com/chenglou/pretext) | 35027 | ![](https://img.shields.io/github/last-commit/chenglou/pretext?style=flat-square) | 7.8 |  |
+| Project | Stars | Last Commit | Description |
+|---------|-------|-------------|-------------|
+| [typexperiments](https://github.com/pablostanley/typexperiments) | ![Stars](https://img.shields.io/github/stars/pablostanley/typexperiments?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/pablostanley/typexperiments?style=flat-square) | Kinetic typography engine — per-character animations on Canvas |
+| [nim-pretext](https://github.com/jasagiri/nim-pretext) | ![Stars](https://img.shields.io/github/stars/jasagiri/nim-pretext?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/jasagiri/nim-pretext?style=flat-square) | Nim WASM port of Pretext — up to 9.5x faster than JS |
+| [pretext-php](https://github.com/mateffy/pretext-php) | ![Stars](https://img.shields.io/github/stars/mateffy/pretext-php?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/mateffy/pretext-php?style=flat-square) | PHP port with ICU segmentation and injectable font measurement |
 <!-- PROJECTS_AUTO_END -->
 
 ---
@@ -241,7 +249,8 @@ const { height, lineCount } = layout(prepared, containerWidth, lineHeight)
 ### Latest Tutorials & Courses
 
 <!-- TUTORIALS_AUTO_START -->
-*No new tutorials found this cycle.*
+- [Pretext.js Tutorial](https://pretextjs.dev/pretext-library) — How to install and start measuring text layout in JS/TS. Published April 2, 2026.
+- [Knuth-Plass Justification with Pretext](https://x.com/yiningkarlli/status/2038561244886831554) — Yining Karl Li implemented TeX-quality justified text on a blog using Pretext under the hood.
 <!-- TUTORIALS_AUTO_END -->
 
 <!-- COURSES_AUTO_START -->
@@ -266,7 +275,8 @@ const { height, lineCount } = layout(prepared, containerWidth, lineHeight)
 ### Latest Articles
 
 <!-- ARTICLES_AUTO_START -->
-*No new articles found this cycle.*
+- [The future of text layout is not CSS](https://chenglou.me/pretext/editorial-engine/) (HN, 16 pts, 19 comments) — Cheng Lou's editorial engine demo that sparked discussion on userland layout.
+- [Pretext: TypeScript library for multiline text measurement](https://news.ycombinator.com/item?id=47556290) (HN, 388 pts, 70 comments) — The main launch thread on Hacker News.
 <!-- ARTICLES_AUTO_END -->
 
 ---
@@ -281,7 +291,8 @@ const { height, lineCount } = layout(prepared, containerWidth, lineHeight)
 ### Latest Videos
 
 <!-- VIDEOS_AUTO_START -->
-*No new videos found this cycle.*
+- [TypeBeat — drum machine from text](https://x.com/alexanderchen/status/2038727366734987763) — Alexander Chen's demo with sound. Built with Pretext + Gemini.
+- [Water ripples effect on DOM text using Pretext](https://www.reddit.com/search/?q=pretext+water+ripples) — Water ripple distortion applied to text via Pretext.
 <!-- VIDEOS_AUTO_END -->
 
 ---
