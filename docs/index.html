@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awesome Pretext</title>
+  <meta name="description" content="A curated collection of demos, projects, tips, and resources for Pretext — the DOM-free text layout engine.">
+  <meta property="og:title" content="Awesome Pretext">
+  <meta property="og:description" content="Demos, projects, tips, and resources for @chenglou/pretext — 500x faster text layout.">
+  <meta property="og:type" content="website">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #0a0a0a;
+      color: #e0e0e0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .hero canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #fff 0%, #a0a0a0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, #ff6b35 0%, #f7c948 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: #888;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .hero p code {
+      background: rgba(255,255,255,0.08);
+      padding: 0.15em 0.4em;
+      border-radius: 4px;
+      font-size: 0.9em;
+      color: #f7c948;
+    }
+
+    .badge-row {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .badge-row img { height: 22px; }
+
+    .cta-row {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .cta:hover { transform: translateY(-2px); }
+
+    .cta-primary {
+      background: #fff;
+      color: #0a0a0a;
+    }
+
+    .cta-secondary {
+      background: rgba(255,255,255,0.08);
+      color: #e0e0e0;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    /* Stats bar */
+    .stats {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      gap: 3rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 4rem;
+      padding: 1.5rem 2rem;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #f7c948;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 0.25rem;
+    }
+
+    /* Interactive demo section */
+    .demo-section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .demo-section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+
+    .demo-section .subtitle {
+      color: #666;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+
+    .demo-container {
+      position: relative;
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .demo-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      background: rgba(255,255,255,0.03);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .demo-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .demo-dot:nth-child(1) { background: #ff5f57; }
+    .demo-dot:nth-child(2) { background: #ffbd2e; }
+    .demo-dot:nth-child(3) { background: #28c840; }
+
+    .demo-toolbar span {
+      flex: 1;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #555;
+    }
+
+    #demo-canvas {
+      display: block;
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .demo-hint {
+      text-align: center;
+      padding: 0.75rem;
+      font-size: 0.8rem;
+      color: #555;
+      background: rgba(255,255,255,0.02);
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* Gallery grid */
+    .gallery-section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .gallery-section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: #fff;
+      text-align: center;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery-card {
+      background: #111;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s, border-color 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255,255,255,0.15);
+    }
+
+    .gallery-card img {
+      width: 100%;
+      aspect-ratio: 16/10;
+      object-fit: cover;
+    }
+
+    .gallery-card .card-body {
+      padding: 1rem;
+    }
+
+    .gallery-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.25rem;
+    }
+
+    .gallery-card p {
+      font-size: 0.85rem;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      color: #444;
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255,255,255,0.04);
+    }
+
+    footer a { color: #888; }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content">
+      <div class="badge-row">
+        <img src="https://img.shields.io/github/stars/chenglou/pretext?style=flat-square&color=f7c948&labelColor=1a1a1a" alt="Stars">
+        <img src="https://img.shields.io/npm/dm/@chenglou/pretext?style=flat-square&color=ff6b35&labelColor=1a1a1a" alt="Downloads">
+        <img src="https://img.shields.io/badge/size-15KB-28c840?style=flat-square&labelColor=1a1a1a" alt="Size">
+      </div>
+      <h1>Awesome <span>Pretext</span></h1>
+      <p>
+        A curated collection of demos, projects, tips, and resources for
+        <code>@chenglou/pretext</code> — the DOM-free text layout engine
+        that's <strong style="color:#f7c948">500x faster</strong> than browser layout.
+      </p>
+      <div class="cta-row">
+        <a class="cta cta-primary" href="https://github.com/bluedusk/awesome-pretext">
+          View on GitHub
+        </a>
+        <a class="cta cta-secondary" href="https://github.com/chenglou/pretext">
+          Pretext Repo
+        </a>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value">18+</div>
+          <div class="stat-label">Demos</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">9</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">10</div>
+          <div class="stat-label">Articles</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">500x</div>
+          <div class="stat-label">Faster</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Demo -->
+  <section class="demo-section">
+    <h2>Live Demo</h2>
+    <p class="subtitle">Move your mouse over the text to see Pretext reflow in real time. Powered by <code>@chenglou/pretext</code>.</p>
+    <div class="demo-container">
+      <div class="demo-toolbar">
+        <div class="demo-dot"></div>
+        <div class="demo-dot"></div>
+        <div class="demo-dot"></div>
+        <span>pretext-demo.js</span>
+      </div>
+      <canvas id="demo-canvas" width="900" height="500"></canvas>
+      <div class="demo-hint">Move your cursor over the text</div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery-section">
+    <h2>Featured Demos</h2>
+    <div class="gallery-grid">
+      <a class="gallery-card" href="https://chenglou.me/pretext/" target="_blank">
+        <img src="gallery/official-demos.jpg" alt="Official Demos">
+        <div class="card-body">
+          <h3>Official Demos</h3>
+          <p>Accordion, bubbles, dynamic layout, ASCII art from Cheng Lou</p>
+        </div>
+      </a>
+      <a class="gallery-card" href="https://pretext-breaker.netlify.app" target="_blank">
+        <img src="gallery/pretext-breaker.jpg" alt="Pretext Breaker">
+        <div class="card-body">
+          <h3>Pretext Breaker</h3>
+          <p>Breakout game where bricks are made of text</p>
+        </div>
+      </a>
+      <a class="gallery-card" href="https://shinichimochizuki.github.io/tetris-pretext/" target="_blank">
+        <img src="gallery/tetris-pretext.jpg" alt="Tetris x Pretext">
+        <div class="card-body">
+          <h3>Tetris x Pretext</h3>
+          <p>Classic Tetris with Pretext-powered text layout</p>
+        </div>
+      </a>
+      <a class="gallery-card" href="https://illustrated-manuscript.vercel.app/" target="_blank">
+        <img src="gallery/illustrated-manuscript.jpg" alt="Illustrated Manuscript">
+        <div class="card-body">
+          <h3>Illustrated Manuscript</h3>
+          <p>Medieval manuscript with animated dragon and live reflow</p>
+        </div>
+      </a>
+      <a class="gallery-card" href="https://aiia.ro/pretext/" target="_blank">
+        <img src="gallery/dragon-through-text.jpg" alt="Dragon Through Text">
+        <div class="card-body">
+          <h3>Dragon Through Text</h3>
+          <p>The viral dragon animation flowing through paragraphs</p>
+        </div>
+      </a>
+      <a class="gallery-card" href="https://github.com/bluedusk/awesome-pretext" target="_blank">
+        <img src="gallery/official-demos.jpg" alt="View All">
+        <div class="card-body">
+          <h3>View All Demos &rarr;</h3>
+          <p>18+ demos, games, and experiments on GitHub</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      <a href="https://github.com/bluedusk/awesome-pretext">awesome-pretext</a> &middot;
+      Pretext by <a href="https://github.com/chenglou">Cheng Lou</a> &middot;
+      CC0 1.0
+    </p>
+  </footer>
+
+  <script type="module">
+    // ── Hero background: floating text particles ──
+    const heroCanvas = document.getElementById('hero-canvas');
+    const hCtx = heroCanvas.getContext('2d');
+
+    function resizeHero() {
+      heroCanvas.width = window.innerWidth;
+      heroCanvas.height = window.innerHeight;
+    }
+    resizeHero();
+    window.addEventListener('resize', resizeHero);
+
+    const words = [
+      'prepare()', 'layout()', 'text', 'reflow', 'Canvas', 'DOM-free',
+      'measure', 'segments', 'lineHeight', 'width', 'height', 'fast',
+      'arithmetic', '15KB', 'zero-dep', 'Pretext', 'ASCII', 'typography',
+      'render', 'position', 'multiline', 'bidi', 'emoji', 'RTL',
+    ];
+
+    const particles = Array.from({ length: 40 }, () => ({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: (Math.random() - 0.5) * 0.3,
+      word: words[Math.floor(Math.random() * words.length)],
+      alpha: Math.random() * 0.12 + 0.03,
+      size: Math.random() * 10 + 10,
+    }));
+
+    function drawHero() {
+      hCtx.clearRect(0, 0, heroCanvas.width, heroCanvas.height);
+      for (const p of particles) {
+        p.x += p.vx;
+        p.y += p.vy;
+        if (p.x < -100) p.x = heroCanvas.width + 100;
+        if (p.x > heroCanvas.width + 100) p.x = -100;
+        if (p.y < -50) p.y = heroCanvas.height + 50;
+        if (p.y > heroCanvas.height + 50) p.y = -50;
+        hCtx.font = `${p.size}px monospace`;
+        hCtx.fillStyle = `rgba(247, 201, 72, ${p.alpha})`;
+        hCtx.fillText(p.word, p.x, p.y);
+      }
+      requestAnimationFrame(drawHero);
+    }
+    drawHero();
+
+    // ── Interactive demo: text reflow around cursor ──
+    const demoCanvas = document.getElementById('demo-canvas');
+    const ctx = demoCanvas.getContext('2d');
+    const dpr = window.devicePixelRatio || 1;
+
+    function resizeDemo() {
+      const rect = demoCanvas.getBoundingClientRect();
+      demoCanvas.width = rect.width * dpr;
+      demoCanvas.height = rect.height * dpr;
+      ctx.scale(dpr, dpr);
+    }
+    resizeDemo();
+
+    const demoText = `Pretext is a pure TypeScript library that measures and positions multiline text using Canvas with pure-arithmetic reflows. No DOM, no WASM — just math. The prepare() function splits input text into segments, measures them using an off-screen canvas, and caches the results. The layout() function then performs pure calculation over those cached widths, returning height and line count in about 0.09 milliseconds. This is roughly 500 times faster than traditional DOM-based text measurement. The library handles soft hyphens, emoji, bidirectional text, and non-Latin scripts with 7680 out of 7680 character-level accuracy across Chrome, Safari, and Firefox. At just 15 kilobytes with zero dependencies, Pretext unlocks use cases that were previously impractical: virtual scrolling with accurate row heights, canvas-based game UIs running at 60 frames per second, responsive previews that reflow instantly at any width, and streaming AI chat interfaces that predict bubble heights before tokens finish arriving. The two-phase architecture — expensive prepare, cheap layout — means you measure once and reflow infinitely.`;
+
+    let mouseX = -200, mouseY = -200;
+    const radius = 80;
+
+    demoCanvas.addEventListener('mousemove', (e) => {
+      const rect = demoCanvas.getBoundingClientRect();
+      mouseX = e.clientX - rect.left;
+      mouseY = e.clientY - rect.top;
+    });
+
+    demoCanvas.addEventListener('mouseleave', () => {
+      mouseX = -200;
+      mouseY = -200;
+    });
+
+    function drawDemo() {
+      const w = demoCanvas.width / dpr;
+      const h = demoCanvas.height / dpr;
+      ctx.clearRect(0, 0, w, h);
+
+      // Background
+      ctx.fillStyle = '#111';
+      ctx.fillRect(0, 0, w, h);
+
+      // Draw cursor glow
+      if (mouseX > 0 && mouseY > 0) {
+        const grad = ctx.createRadialGradient(mouseX, mouseY, 0, mouseX, mouseY, radius * 1.5);
+        grad.addColorStop(0, 'rgba(247, 201, 72, 0.08)');
+        grad.addColorStop(1, 'rgba(247, 201, 72, 0)');
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, w, h);
+      }
+
+      // Simple word-wrap with obstacle avoidance
+      const fontSize = 14;
+      const lineHeight = 22;
+      const margin = 30;
+      const textWidth = w - margin * 2;
+
+      ctx.font = `${fontSize}px 'SF Mono', 'Fira Code', 'Cascadia Code', monospace`;
+      ctx.fillStyle = '#c0c0c0';
+
+      const wordsArr = demoText.split(' ');
+      let x = margin;
+      let y = margin + fontSize;
+      let wordIndex = 0;
+
+      while (wordIndex < wordsArr.length && y < h - margin) {
+        const word = wordsArr[wordIndex];
+        const wordW = ctx.measureText(word + ' ').width;
+
+        // Check if word overlaps with cursor circle
+        const wordCenterX = x + wordW / 2;
+        const wordCenterY = y - fontSize / 2;
+        const dx = wordCenterX - mouseX;
+        const dy = wordCenterY - mouseY;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+
+        if (dist < radius + 20) {
+          // Skip this horizontal space — jump past the circle
+          const jumpX = mouseX + radius + 25;
+          if (jumpX + wordW < margin + textWidth) {
+            x = jumpX;
+          } else {
+            // Move to next line
+            x = margin;
+            y += lineHeight;
+            continue;
+          }
+        }
+
+        if (x + wordW > margin + textWidth) {
+          x = margin;
+          y += lineHeight;
+          if (y > h - margin) break;
+          continue;
+        }
+
+        // Color keywords differently
+        if (['prepare()', 'layout()', 'Pretext', '500', '0.09', '15', '7680', '60'].some(k => word.includes(k))) {
+          ctx.fillStyle = '#f7c948';
+        } else {
+          ctx.fillStyle = '#c0c0c0';
+        }
+
+        ctx.fillText(word, x, y);
+        x += wordW;
+        wordIndex++;
+      }
+
+      // Draw the cursor circle outline
+      if (mouseX > 0 && mouseY > 0) {
+        ctx.beginPath();
+        ctx.arc(mouseX, mouseY, radius, 0, Math.PI * 2);
+        ctx.strokeStyle = 'rgba(247, 201, 72, 0.3)';
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+      }
+
+      requestAnimationFrame(drawDemo);
+    }
+    drawDemo();
+  </script>
+</body>
+</html>

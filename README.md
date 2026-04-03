@@ -1,12 +1,25 @@
-# Awesome Pretext [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+<p align="center">
+  <a href="https://bluedusk.github.io/awesome-pretext/">
+    <img src="gallery/hero-banner.jpg" alt="Awesome Pretext" width="100%">
+  </a>
+</p>
 
-A curated collection of demos, projects, tips, tutorials, and news for [Pretext](https://github.com/chenglou/pretext) — the DOM-free text layout engine by [Cheng Lou](https://chenglou.me/) that's 500x faster than traditional browser layout.
+<p align="center">
+  <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
+  <a href="https://github.com/chenglou/pretext"><img src="https://img.shields.io/github/stars/chenglou/pretext?style=flat-square&label=pretext%20stars" alt="Stars"></a>
+  <a href="https://www.npmjs.com/package/@chenglou/pretext"><img src="https://img.shields.io/npm/dm/@chenglou/pretext?style=flat-square&label=npm%20downloads" alt="Downloads"></a>
+  <a href="https://github.com/chenglou/pretext/commits/main"><img src="https://img.shields.io/github/last-commit/chenglou/pretext?style=flat-square" alt="Last commit"></a>
+</p>
+
+<p align="center">
+  A curated collection of demos, projects, tips, tutorials, and news for <a href="https://github.com/chenglou/pretext">Pretext</a> — the DOM-free text layout engine by <a href="https://chenglou.me/">Cheng Lou</a> that's 500x faster than browser layout.
+</p>
+
+<p align="center">
+  <b><a href="https://bluedusk.github.io/awesome-pretext/">Try the interactive demo &rarr;</a></b>
+</p>
 
 > Pretext is a 15KB, zero-dependency TypeScript library that measures and positions text using Canvas with pure-arithmetic reflows. No DOM, no WASM — just math.
-
-[![GitHub stars](https://img.shields.io/github/stars/chenglou/pretext?style=flat-square&label=pretext%20stars)](https://github.com/chenglou/pretext)
-[![npm](https://img.shields.io/npm/dm/@chenglou/pretext?style=flat-square&label=npm%20downloads)](https://www.npmjs.com/package/@chenglou/pretext)
-[![Last commit](https://img.shields.io/github/last-commit/chenglou/pretext?style=flat-square)](https://github.com/chenglou/pretext/commits/main)
 
 Last auto-updated: 2026-04-03
 
@@ -26,7 +39,6 @@ Last auto-updated: 2026-04-03
 - [News](#news)
 - [People to Follow](#people-to-follow)
 - [Related Projects](#related-projects)
-- [Other Awesome Lists](#other-awesome-lists)
 
 ---
 
@@ -354,6 +366,7 @@ Key coverage:
 
 ### Community
 
+- [pretext.cool](https://www.pretext.cool/) — Community gallery and guides
 - [Pretext Wiki](https://pretext.wiki/) — Community hub and documentation
 - [pretextjs.dev](https://pretextjs.dev/) — Community resource site
 - [Hacker News Thread](https://news.ycombinator.com/item?id=47556290) — Launch discussion
@@ -370,17 +383,6 @@ Libraries and tools in the same problem space as Pretext.
 | [Yoga](https://github.com/facebook/yoga) | Cross-platform layout engine (Flexbox) by Meta. Textura combines it with Pretext. |
 | [opentype.js](https://github.com/opentypejs/opentype.js) | JavaScript parser and writer for OpenType fonts — complementary for font-level work. |
 | [react-motion](https://github.com/chenglou/react-motion) | Also by Cheng Lou — animation library for React that shares the "math over DOM" philosophy. |
-
----
-
-## Other Awesome Lists
-
-- [awesome-canvas](https://github.com/raphamorim/awesome-canvas) — HTML5 Canvas examples, articles, and posts.
-- [awesome-typography](https://github.com/Jolg42/awesome-typography) — Curated list about digital typography.
-- [awesome-fonts](https://github.com/brabadu/awesome-fonts) — Curated list of fonts and everything.
-- [awesome-artistic-typography](https://github.com/williamyang1991/Awesome-Artistic-Typography) — Artistic typography methods and datasets.
-- [awesome-react](https://github.com/enaqx/awesome-react) — Awesome things about the React ecosystem.
-- [awesome-javascript](https://github.com/sorrycc/awesome-javascript) — Collection of awesome browser-side JavaScript libraries.
 
 ---
 
