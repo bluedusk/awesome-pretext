@@ -1,54 +1,124 @@
 {
-  "last_updated": "2026-04-03T06:11:06.669Z",
+  "last_updated": "2026-04-03T07:00:00Z",
   "links": [
     {
+      "url": "https://github.com/pablostanley/typexperiments",
+      "title": "pablostanley/typexperiments",
+      "description": "Kinetic typography engine powered by Pretext. Smooth per-character text animations on Canvas.",
       "source": "github",
-      "type": "repo",
-      "url": "https://github.com/chenglou/pretext",
-      "title": "chenglou/pretext",
-      "description": "",
-      "stars": 35026,
-      "updated_at": "2026-04-03T06:10:19Z",
-      "raw": {
-        "description": "",
-        "fullName": "chenglou/pretext",
-        "stargazersCount": 35026,
-        "updatedAt": "2026-04-03T06:10:19Z",
-        "url": "https://github.com/chenglou/pretext"
-      },
       "category": "community-project",
-      "enriched": {
-        "created_at": "2026-03-07T21:06:28Z",
-        "forks": 1811,
-        "has_wiki": true,
-        "homepage": null,
-        "language": "TypeScript",
-        "license": "MIT",
-        "open_issues": 63,
-        "pushed_at": "2026-04-02T18:29:12Z",
-        "size": 1326,
-        "stars": 35027,
-        "topics": [],
-        "updated_at": "2026-04-03T06:11:04Z",
-        "watchers": 113,
-        "recent_commits_30d": 262,
-        "contributors": 5
-      },
-      "evaluation": {
-        "scores": {
-          "relevance": 5,
-          "popularity": 10,
-          "freshness": 10,
-          "activity": 9,
-          "quality": 5,
-          "authority": 10
-        },
-        "composite": 7.85,
-        "decision": "include"
-      },
-      "ai_review": null,
-      "added_at": "2026-04-03T06:11:06.669Z",
-      "last_checked": "2026-04-03T06:11:06.669Z"
+      "stars": 17,
+      "added_at": "2026-04-03",
+      "score": 7.5,
+      "decision": "include"
+    },
+    {
+      "url": "https://x.com/alexanderchen/status/2038727366734987763",
+      "title": "TypeBeat — drum machine from text",
+      "description": "Alexander Chen made a drum machine entirely out of text using Pretext + Gemini. Each character triggers a sound.",
+      "source": "x",
+      "category": "demo",
+      "added_at": "2026-04-03",
+      "score": 7.8,
+      "decision": "include"
+    },
+    {
+      "url": "https://x.com/kho/status/2038160195571102068",
+      "title": "BioMap — 52 biomarker blocks",
+      "description": "Kevin Ho: 52 biomarker blocks that expand as you explore, reflowing text across every block every frame. 0.04ms for all 52 layouts.",
+      "source": "x",
+      "category": "demo",
+      "added_at": "2026-04-03",
+      "score": 7.2,
+      "decision": "include"
+    },
+    {
+      "url": "https://x.com/yiningkarlli/status/2038561244886831554",
+      "title": "Knuth-Plass justification via Pretext",
+      "description": "Yining Karl Li implemented Knuth-Plass text justification algorithm on a blog using Pretext under the hood.",
+      "source": "x",
+      "category": "tutorial",
+      "added_at": "2026-04-03",
+      "score": 7.0,
+      "decision": "include"
+    },
+    {
+      "url": "https://github.com/jasagiri/nim-pretext",
+      "title": "jasagiri/nim-pretext",
+      "description": "Nim WASM port of pretext text layout engine — up to 9.5x faster than JS.",
+      "source": "github",
+      "category": "community-project",
+      "stars": 0,
+      "added_at": "2026-04-03",
+      "score": 5.8,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/mateffy/pretext-php",
+      "title": "mateffy/pretext-php",
+      "description": "PHP port of chenglou/pretext with ICU segmentation and injectable font measurement.",
+      "source": "github",
+      "category": "community-project",
+      "stars": 0,
+      "added_at": "2026-04-03",
+      "score": 5.5,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/jameslcowan/pretext-wars",
+      "title": "jameslcowan/pretext-wars",
+      "description": "Space-themed interactive showcase — destroy poetry with your spaceship.",
+      "source": "github",
+      "category": "demo",
+      "stars": 0,
+      "added_at": "2026-04-03",
+      "score": 5.2,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/ShipItAndPray/pretext-slides",
+      "title": "ShipItAndPray/pretext-slides",
+      "description": "Presentation tool rendering slides in Canvas with Pretext text layout. Write markdown, present anywhere.",
+      "source": "github",
+      "category": "demo",
+      "stars": 0,
+      "added_at": "2026-04-03",
+      "score": 5.0,
+      "decision": "review"
+    },
+    {
+      "url": "https://pretextjs.dev/pretext-library",
+      "title": "Pretext.js Tutorial",
+      "description": "How to install Pretext from npm and start measuring text layout in JS/TS.",
+      "source": "web",
+      "category": "tutorial",
+      "added_at": "2026-04-03",
+      "score": 7.5,
+      "decision": "include"
+    },
+    {
+      "url": "https://news.ycombinator.com/item?id=47556290",
+      "title": "Pretext: TypeScript library for multiline text measurement",
+      "description": "Main HN launch thread. 388 points, 70 comments.",
+      "source": "hackernews",
+      "category": "article",
+      "points": 388,
+      "comments": 70,
+      "added_at": "2026-04-03",
+      "score": 9.0,
+      "decision": "include"
+    },
+    {
+      "url": "https://chenglou.me/pretext/editorial-engine/",
+      "title": "The future of text layout is not CSS",
+      "description": "Cheng Lou's editorial engine demo. HN: 16 points, 19 comments.",
+      "source": "hackernews",
+      "category": "article",
+      "points": 16,
+      "comments": 19,
+      "added_at": "2026-04-03",
+      "score": 7.5,
+      "decision": "include"
     }
   ]
 }
