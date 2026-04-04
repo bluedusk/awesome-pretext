@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-03T07:00:00Z",
+  "last_updated": "2026-04-04T08:00:00Z",
   "links": [
     {
       "url": "https://github.com/pablostanley/typexperiments",
@@ -118,6 +118,67 @@
       "comments": 19,
       "added_at": "2026-04-03",
       "score": 7.5,
+      "decision": "include"
+    },
+    {
+      "url": "https://github.com/craigm26/pretext_dart",
+      "title": "craigm26/pretext_dart",
+      "description": "Dart/Flutter port of pretext — pure-arithmetic multiline text layout with variable per-line widths.",
+      "source": "github",
+      "category": "community-project",
+      "stars": 9,
+      "added_at": "2026-04-04",
+      "score": 7.5,
+      "decision": "include"
+    },
+    {
+      "url": "https://pretext.xergioalex.com/",
+      "title": "Pretext Lab",
+      "description": "Interactive playground — drag width sliders, masonry grids, chat bubbles, text flow around shapes. By XergioAleX.",
+      "source": "web",
+      "category": "demo",
+      "added_at": "2026-04-04",
+      "score": 7.8,
+      "decision": "include"
+    },
+    {
+      "url": "https://x.com/kirupa/status/2038321938624651679",
+      "title": "Kirupa Podcast: Cheng Lou on Text Layout",
+      "description": "Podcast interview where Cheng Lou discusses his passion for text layout and the thinking behind Pretext.",
+      "source": "x",
+      "category": "video",
+      "added_at": "2026-04-04",
+      "score": 8.5,
+      "decision": "include"
+    },
+    {
+      "url": "https://pretextjs.dev/blog/chenglou-pretext",
+      "title": "The Story Behind the Fastest JavaScript Text Layout Engine",
+      "description": "Deep dive into Cheng Lou's journey building Pretext.",
+      "source": "web",
+      "category": "article",
+      "added_at": "2026-04-04",
+      "score": 7.2,
+      "decision": "include"
+    },
+    {
+      "url": "https://dev.to/micaavigliano/accessible-pretext-demo-1492",
+      "title": "Accessible Pretext Demo",
+      "description": "Building an accessible demo with Pretext on DEV.to.",
+      "source": "web",
+      "category": "article",
+      "added_at": "2026-04-04",
+      "score": 6.5,
+      "decision": "review"
+    },
+    {
+      "url": "https://x.com/smolekoma/status/2038649393574809911",
+      "title": "Pretext + Three.js Guide",
+      "description": "Combining Pretext for precision text layout with Three.js for spatial embodiment. By TachikomaRed.",
+      "source": "x",
+      "category": "tutorial",
+      "added_at": "2026-04-04",
+      "score": 7.0,
       "decision": "include"
     }
   ]
