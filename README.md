@@ -21,7 +21,7 @@
 
 > Pretext is a 15KB, zero-dependency TypeScript library that measures and positions text using Canvas with pure-arithmetic reflows. No DOM, no WASM — just math.
 
-Last auto-updated: 2026-04-03 (via `/awesome-pretext-update`)
+Last auto-updated: 2026-04-04 (via `/awesome-pretext-update`)
 
 ## Contents
 
@@ -140,6 +140,7 @@ Last auto-updated: 2026-04-03 (via `/awesome-pretext-update`)
 | **BioMap** | Kevin Ho | 52 biomarker blocks that expand and reflow text every frame — 0.04ms for all 52 layouts | [X post](https://x.com/kho/status/2038160195571102068) |
 | **Pretext Wars** | jameslcowan | Space-themed game — destroy poetry with your spaceship | [![GitHub](https://img.shields.io/github/stars/jameslcowan/pretext-wars?style=flat-square)](https://github.com/jameslcowan/pretext-wars) |
 | **Pretext Slides** | ShipItAndPray | Presentation tool rendering slides in Canvas with Pretext — write markdown, present anywhere | [![GitHub](https://img.shields.io/github/stars/ShipItAndPray/pretext-slides?style=flat-square)](https://github.com/ShipItAndPray/pretext-slides) |
+| **Pretext Lab** | XergioAleX | Interactive playground — drag width sliders, masonry grids, chat bubbles, text flow around shapes | [site](https://pretext.xergioalex.com/) |
 <!-- DEMOS_AUTO_END -->
 
 ### Live Demos
@@ -147,6 +148,7 @@ Last auto-updated: 2026-04-03 (via `/awesome-pretext-update`)
 - [Official Pretext Demos](https://chenglou.me/pretext/) — Accordion, bubbles, dynamic layout, ASCII art from Cheng Lou.
 - [Dragon Through Text](https://aiia.ro/pretext/) — The viral dragon animation flowing through paragraphs.
 - [Pretext Breaker](https://pretext-breaker.netlify.app) — Playable Breakout game in the browser.
+- [Pretext Lab](https://pretext.xergioalex.com/) — Interactive playground with drag-to-resize, masonry, chat bubbles, text flow around shapes.
 
 ---
 
@@ -174,6 +176,7 @@ High-star GitHub projects built with or extending Pretext. Star counts and activ
 | [typexperiments](https://github.com/pablostanley/typexperiments) | ![Stars](https://img.shields.io/github/stars/pablostanley/typexperiments?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/pablostanley/typexperiments?style=flat-square) | Kinetic typography engine — per-character animations on Canvas |
 | [nim-pretext](https://github.com/jasagiri/nim-pretext) | ![Stars](https://img.shields.io/github/stars/jasagiri/nim-pretext?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/jasagiri/nim-pretext?style=flat-square) | Nim WASM port of Pretext — up to 9.5x faster than JS |
 | [pretext-php](https://github.com/mateffy/pretext-php) | ![Stars](https://img.shields.io/github/stars/mateffy/pretext-php?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/mateffy/pretext-php?style=flat-square) | PHP port with ICU segmentation and injectable font measurement |
+| [pretext_dart](https://github.com/craigm26/pretext_dart) | ![Stars](https://img.shields.io/github/stars/craigm26/pretext_dart?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/craigm26/pretext_dart?style=flat-square) | Dart/Flutter port — pure-arithmetic multiline text layout |
 <!-- PROJECTS_AUTO_END -->
 
 ---
@@ -251,6 +254,7 @@ const { height, lineCount } = layout(prepared, containerWidth, lineHeight)
 <!-- TUTORIALS_AUTO_START -->
 - [Pretext.js Tutorial](https://pretextjs.dev/pretext-library) — How to install and start measuring text layout in JS/TS. Published April 2, 2026.
 - [Knuth-Plass Justification with Pretext](https://x.com/yiningkarlli/status/2038561244886831554) — Yining Karl Li implemented TeX-quality justified text on a blog using Pretext under the hood.
+- [Pretext + Three.js Guide](https://x.com/smolekoma/status/2038649393574809911) — Combining Pretext for precision text layout with Three.js for spatial embodiment. By TachikomaRed.
 <!-- TUTORIALS_AUTO_END -->
 
 <!-- COURSES_AUTO_START -->
@@ -275,8 +279,10 @@ const { height, lineCount } = layout(prepared, containerWidth, lineHeight)
 ### Latest Articles
 
 <!-- ARTICLES_AUTO_START -->
+- [The Story Behind the Fastest JavaScript Text Layout Engine](https://pretextjs.dev/blog/chenglou-pretext) — Deep dive into Cheng Lou's journey building Pretext.
+- [Accessible Pretext Demo](https://dev.to/micaavigliano/accessible-pretext-demo-1492) — Building an accessible demo with Pretext on DEV.to.
 - [The future of text layout is not CSS](https://chenglou.me/pretext/editorial-engine/) (HN, 16 pts, 19 comments) — Cheng Lou's editorial engine demo that sparked discussion on userland layout.
-- [Pretext: TypeScript library for multiline text measurement](https://news.ycombinator.com/item?id=47556290) (HN, 388 pts, 70 comments) — The main launch thread on Hacker News.
+- [Pretext: TypeScript library for multiline text measurement](https://news.ycombinator.com/item?id=47556290) (HN, 390 pts, 70 comments) — The main launch thread on Hacker News.
 <!-- ARTICLES_AUTO_END -->
 
 ---
@@ -291,8 +297,8 @@ const { height, lineCount } = layout(prepared, containerWidth, lineHeight)
 ### Latest Videos
 
 <!-- VIDEOS_AUTO_START -->
+- [Kirupa Podcast: Cheng Lou on Text Layout](https://x.com/kirupa/status/2038321938624651679) — Podcast interview where Cheng Lou discusses his passion for text layout and the thinking behind Pretext.
 - [TypeBeat — drum machine from text](https://x.com/alexanderchen/status/2038727366734987763) — Alexander Chen's demo with sound. Built with Pretext + Gemini.
-- [Water ripples effect on DOM text using Pretext](https://www.reddit.com/search/?q=pretext+water+ripples) — Water ripple distortion applied to text via Pretext.
 <!-- VIDEOS_AUTO_END -->
 
 ---
@@ -396,7 +402,7 @@ Key coverage:
 
 ### Milestones
 
-- **34,600+ stars** on GitHub (as of April 2026)
+- **35,000+ stars** on GitHub (as of April 2026)
 - Built using AI-assisted development (Claude + Codex), trained for weeks on browser ground truth
 - 18+ community demos from independent developers within days of launch
 
