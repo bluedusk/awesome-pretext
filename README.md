@@ -28,7 +28,6 @@ Last auto-updated: 2026-04-04 (via `/awesome-pretext-update`)
 - [Demo Gallery](#demo-gallery)
 - [Demos](#demos)
 - [Community Projects](#community-projects)
-- [Tips](#tips)
 - [Tutorials](#tutorials)
 - [Articles & Blog Posts](#articles--blog-posts)
 - [Videos & Talks](#videos--talks)
@@ -178,56 +177,6 @@ High-star GitHub projects built with or extending Pretext. Star counts and activ
 | [pretext-php](https://github.com/mateffy/pretext-php) | ![Stars](https://img.shields.io/github/stars/mateffy/pretext-php?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/mateffy/pretext-php?style=flat-square) | PHP port with ICU segmentation and injectable font measurement |
 | [pretext_dart](https://github.com/craigm26/pretext_dart) | ![Stars](https://img.shields.io/github/stars/craigm26/pretext_dart?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/craigm26/pretext_dart?style=flat-square) | Dart/Flutter port — pure-arithmetic multiline text layout |
 <!-- PROJECTS_AUTO_END -->
-
----
-
-## Tips
-
-### Getting Started
-
-```bash
-npm install @chenglou/pretext
-```
-
-### Basic Usage
-
-Pretext splits work into two phases: **prepare** (expensive, cached) and **layout** (fast, pure math).
-
-```ts
-import { prepare, layout } from '@chenglou/pretext'
-
-// Phase 1: measure segments (do once, cache the result)
-const prepared = prepare('Your text here', '16px Inter')
-
-// Phase 2: compute layout (sub-millisecond, call on every resize)
-const { height, lineCount } = layout(prepared, containerWidth, lineHeight)
-```
-
-### Core API
-
-| Function | Purpose |
-|----------|---------|
-| `prepare(text, font)` | Splits text into segments, measures via off-screen Canvas, caches results |
-| `layout(prepared, width, lineHeight)` | Pure arithmetic — returns height, line count, and line breaks |
-| `prepareWithSegments()` | Like `prepare()` but also returns individual segment data |
-| `layoutWithLines()` | Like `layout()` but also returns per-line positioning info |
-
-### When to Use Pretext
-
-- **Auto-sizing text containers** — know the height before rendering to the DOM
-- **Virtual scrolling** — calculate row heights without rendering
-- **Canvas/WebGL UIs** — full text layout with no DOM at all
-- **Games** — sub-millisecond layout enables 60fps text-based games
-- **Responsive previews** — instantly reflow text at any width
-- **Streaming AI responses** — predict bubble heights before tokens finish streaming
-
-### Performance Tips
-
-- Call `prepare()` once per text+font combo and cache the result
-- `layout()` is pure arithmetic (~0.09ms) — safe to call in `requestAnimationFrame`
-- Pretext handles soft hyphens, emoji, RTL text, and non-Latin scripts
-- The library is 15KB with zero dependencies
-- 7680/7680 accuracy across Chrome, Safari, and Firefox
 
 ---
 
