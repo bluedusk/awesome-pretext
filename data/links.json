@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-04T08:00:00Z",
+  "last_updated": "2026-04-06T08:00:00Z",
   "links": [
     {
       "url": "https://github.com/pablostanley/typexperiments",
@@ -180,6 +180,59 @@
       "added_at": "2026-04-04",
       "score": 7.0,
       "decision": "include"
+    },
+    {
+      "url": "https://learn-pretext.com/",
+      "title": "Learn Pretext",
+      "description": "25+ interactive tutorials with live demos and annotated source code covering text measurement, layout, and advanced reflow techniques.",
+      "source": "web",
+      "category": "tutorial",
+      "added_at": "2026-04-06",
+      "score": 7.5,
+      "decision": "include"
+    },
+    {
+      "url": "https://aiia.ro/blog/pretext-js-tutorial-guide/",
+      "title": "How to Use Pretext.js: A Practical Guide",
+      "description": "Hands-on guide covering installation, API basics, text reflow around obstacles, multi-slot layouts, and performance benchmarks.",
+      "source": "web",
+      "category": "tutorial",
+      "added_at": "2026-04-06",
+      "score": 7.0,
+      "decision": "include"
+    },
+    {
+      "url": "https://github.com/yaniv-golan/pretext-skill",
+      "title": "yaniv-golan/pretext-skill",
+      "description": "AI skill for @chenglou/pretext — exact text metrics without DOM reflows. Works with Claude, Cursor, etc.",
+      "source": "github",
+      "category": "community-project",
+      "stars": 6,
+      "added_at": "2026-04-06",
+      "score": 6.8,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/ahmadparizaad/pretext-studio-core",
+      "title": "ahmadparizaad/pretext-studio-core",
+      "description": "React hooks that predict text height before render using Pretext. Show HN with 8 points.",
+      "source": "github",
+      "category": "community-project",
+      "stars": 0,
+      "added_at": "2026-04-06",
+      "score": 6.0,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/nathankim0/pretext_flutter",
+      "title": "nathankim0/pretext_flutter",
+      "description": "Pure Dart text measurement & layout library for Flutter. Port of chenglou/pretext.",
+      "source": "github",
+      "category": "community-project",
+      "stars": 2,
+      "added_at": "2026-04-06",
+      "score": 5.5,
+      "decision": "review"
     }
   ]
 }

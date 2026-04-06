@@ -21,7 +21,7 @@
 
 > Pretext is a 15KB, zero-dependency TypeScript library that measures and positions text using Canvas with pure-arithmetic reflows. No DOM, no WASM — just math.
 
-Last auto-updated: 2026-04-04 (via `/awesome-pretext-update`)
+Last auto-updated: 2026-04-06 (via `/awesome-pretext-update`)
 
 ## Contents
 
@@ -201,6 +201,8 @@ High-star GitHub projects built with or extending Pretext. Star counts and activ
 ### Latest Tutorials & Courses
 
 <!-- TUTORIALS_AUTO_START -->
+- [Learn Pretext](https://learn-pretext.com/) — 25+ interactive tutorials with live demos and annotated source code covering text measurement, layout, and advanced reflow techniques.
+- [How to Use Pretext.js: A Practical Guide](https://aiia.ro/blog/pretext-js-tutorial-guide/) — Hands-on guide covering installation, API basics, text reflow around obstacles, multi-slot layouts, and performance benchmarks.
 - [Pretext.js Tutorial](https://pretextjs.dev/pretext-library) — How to install and start measuring text layout in JS/TS. Published April 2, 2026.
 - [Knuth-Plass Justification with Pretext](https://x.com/yiningkarlli/status/2038561244886831554) — Yining Karl Li implemented TeX-quality justified text on a blog using Pretext under the hood.
 - [Pretext + Three.js Guide](https://x.com/smolekoma/status/2038649393574809911) — Combining Pretext for precision text layout with Three.js for spatial embodiment. By TachikomaRed.
