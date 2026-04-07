@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Gallery — Awesome Pretext</title>
+  <meta name="description" content="Every Pretext demo in one place — games, visual experiments, tools, and emerging projects built with @chenglou/pretext.">
+  <meta property="og:title" content="Demo Gallery — Awesome Pretext">
+  <meta property="og:description" content="26+ demos built with @chenglou/pretext — the DOM-free text layout engine.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+    :root {
+      --bg: #08080a;
+      --surface: #111114;
+      --border: rgba(255,255,255,0.06);
+      --border-hover: rgba(255,255,255,0.14);
+      --text: #c8c8cc;
+      --text-dim: #66666a;
+      --text-bright: #ededf0;
+      --cat-games: #ff6b35;
+      --cat-visual: #f7c948;
+      --cat-experiment: #34d399;
+      --cat-emerging: #a78bfa;
+      --cat-official: #60a5fa;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(8,8,10,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-header a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.15s;
+    }
+
+    .site-header a:hover { color: var(--text-bright); }
+
+    .back-link::before {
+      content: "\2190\00a0";
+      opacity: 0.5;
+    }
+
+    .header-title {
+      font-size: 0.85rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-dim);
+      letter-spacing: 0.04em;
+    }
+
+    .gh-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .gh-link svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* ── Page intro ── */
+    .intro {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 1rem;
+    }
+
+    .intro h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      color: var(--text-bright);
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+
+    .intro h1 span {
+      color: var(--cat-games);
+    }
+
+    .intro p {
+      margin-top: 0.75rem;
+      font-size: 1.05rem;
+      color: var(--text-dim);
+      max-width: 560px;
+      line-height: 1.55;
+    }
+
+    .count-badge {
+      display: inline-block;
+      margin-top: 1.25rem;
+      padding: 0.3rem 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--cat-emerging);
+      background: rgba(167,139,250,0.08);
+      border: 1px solid rgba(167,139,250,0.15);
+      border-radius: 6px;
+    }
+
+    /* ── Filters ── */
+    .filters {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 1.5rem 2rem 0.5rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-pill {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-dim);
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .filter-pill:hover {
+      border-color: var(--border-hover);
+      color: var(--text);
+    }
+
+    .filter-pill[aria-pressed="true"] {
+      background: var(--text-bright);
+      color: var(--bg);
+      border-color: transparent;
+    }
+
+    /* ── Grid ── */
+    .grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 1.5rem 2rem 4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.25rem;
+    }
+
+    /* ── Card ── */
+    .card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.25s cubic-bezier(.22,1,.36,1), border-color 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: var(--border-hover);
+    }
+
+    .card[data-hidden="true"] {
+      display: none;
+    }
+
+    .card-visual {
+      position: relative;
+      height: 140px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* gradient placeholder when no screenshot */
+    .card-visual .glyph {
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      opacity: 0.12;
+      color: #fff;
+      user-select: none;
+      position: absolute;
+      bottom: -0.1em;
+      right: 0.3em;
+      font-family: 'Space Grotesk', system-ui;
+      line-height: 1;
+    }
+
+    .card-visual .icon-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.45);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* category gradients */
+    .cat-games .card-visual    { background: linear-gradient(135deg, #1a0e08 0%, #2a1408 50%, #1a0e08 100%); }
+    .cat-visual .card-visual   { background: linear-gradient(135deg, #1a1608 0%, #2a2208 50%, #1a1608 100%); }
+    .cat-experiment .card-visual { background: linear-gradient(135deg, #081a12 0%, #0a2a18 50%, #081a12 100%); }
+    .cat-emerging .card-visual { background: linear-gradient(135deg, #12081a 0%, #1a0e2a 50%, #12081a 100%); }
+    .cat-official .card-visual { background: linear-gradient(135deg, #080e1a 0%, #0a142a 50%, #080e1a 100%); }
+
+    .card-body {
+      flex: 1;
+      padding: 1rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .card-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-bright);
+      line-height: 1.3;
+    }
+
+    .card-cat {
+      flex-shrink: 0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .cat-games .card-cat    { color: var(--cat-games);   background: rgba(255,107,53,0.1); }
+    .cat-visual .card-cat   { color: var(--cat-visual);  background: rgba(247,201,72,0.1); }
+    .cat-experiment .card-cat { color: var(--cat-experiment); background: rgba(52,211,153,0.1); }
+    .cat-emerging .card-cat { color: var(--cat-emerging); background: rgba(167,139,250,0.1); }
+    .cat-official .card-cat { color: var(--cat-official); background: rgba(96,165,250,0.1); }
+
+    .card-author {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--text);
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    .card-links {
+      display: flex;
+      gap: 0.6rem;
+      margin-top: 0.5rem;
+      padding-top: 0.6rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .card-links a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .card-links a:hover { color: var(--text-bright); }
+    .card-links a::before { content: "\2192\00a0"; opacity: 0.4; }
+
+    /* ── Footer ── */
+    .site-footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      border-top: 1px solid var(--border);
+    }
+
+    .site-footer a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 700px) {
+      .site-header { padding: 0.75rem 1.25rem; }
+      .intro, .filters, .grid { padding-left: 1.25rem; padding-right: 1.25rem; }
+      .grid { grid-template-columns: 1fr; }
+      .header-title { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="back-link" href="./">Awesome Pretext</a>
+    <span class="header-title">gallery</span>
+    <a class="gh-link" href="https://github.com/bluedusk/awesome-pretext" target="_blank" rel="noopener">
+      <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+    </a>
+  </header>
+
+  <section class="intro">
+    <h1>Demo <span>Gallery</span></h1>
+    <p>Games, visual experiments, tools, and creative projects built with Pretext.</p>
+    <div class="count-badge" id="count-badge">26 demos</div>
+  </section>
+
+  <nav class="filters" role="tablist" aria-label="Filter demos by category">
+    <button class="filter-pill" aria-pressed="true" data-filter="all">All</button>
+    <button class="filter-pill" aria-pressed="false" data-filter="games">Games</button>
+    <button class="filter-pill" aria-pressed="false" data-filter="visual">Visual</button>
+    <button class="filter-pill" aria-pressed="false" data-filter="experiment">Experiments</button>
+    <button class="filter-pill" aria-pressed="false" data-filter="emerging">Emerging</button>
+    <button class="filter-pill" aria-pressed="false" data-filter="official">Official</button>
+  </nav>
+
+  <main class="grid" id="grid">
+
+    <!-- ═══ Official ═══ -->
+    <article class="card cat-official" data-cat="official">
+      <div class="card-visual">
+        <img src="../gallery/official-demos.jpg" alt="Official Pretext Demos">
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">Official Demos</span><span class="card-cat">Official</span></div>
+        <span class="card-author">Cheng Lou</span>
+        <p class="card-desc">Accordion, bubbles, dynamic layout, editorial engine, and ASCII art. The definitive showcase.</p>
+        <div class="card-links">
+          <a href="https://chenglou.me/pretext/" target="_blank">Live demo</a>
+          <a href="https://github.com/chenglou/pretext" target="_blank">Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card cat-official" data-cat="official">
+      <div class="card-visual">
+        <img src="../gallery/dragon-through-text.jpg" alt="Dragon Through Text">
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">Dragon Through Text</span><span class="card-cat">Official</span></div>
+        <span class="card-author">aiia.ro</span>
+        <p class="card-desc">The viral dragon animation flowing through paragraphs. 19M views on X.</p>
+        <div class="card-links">
+          <a href="https://aiia.ro/pretext/" target="_blank">Live demo</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ═══ Games & Flagship ═══ -->
+    <article class="card cat-games" data-cat="games">
+      <div class="card-visual">
+        <span class="glyph">BA!</span>
+        <span class="icon-label">ascii animation</span>
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">Bad Apple!! ASCII</span><span class="card-cat">Game</span></div>
+        <span class="card-author">frmlinn</span>
+        <p class="card-desc">The legendary Bad Apple!! shadow art PV rendered as real-time ASCII text animation.</p>
+        <div class="card-links">
+          <a href="https://github.com/frmlinn/bad-apple-pretext" target="_blank">Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card cat-games" data-cat="games">
+      <div class="card-visual">
+        <span class="glyph">&gt;_</span>
+        <span class="icon-label">playground</span>
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">Pretext Playground</span><span class="card-cat">Game</span></div>
+        <span class="card-author">0xNyk</span>
+        <p class="card-desc">Interactive ASCII dragon with physics-driven letters, fire breathing, 3D text tunnel, and floating enemies.</p>
+        <div class="card-links">
+          <a href="https://github.com/0xNyk/pretext-playground" target="_blank">Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card cat-games" data-cat="games">
+      <div class="card-visual">
+        <img src="../gallery/pretext-breaker.jpg" alt="Pretext Breaker">
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">Pretext Breaker</span><span class="card-cat">Game</span></div>
+        <span class="card-author">rinesh</span>
+        <p class="card-desc">Breakout-style arcade game where bricks are made of text, with sound effects.</p>
+        <div class="card-links">
+          <a href="https://pretext-breaker.netlify.app" target="_blank">Play</a>
+          <a href="https://github.com/rinesh/pretext-breaker" target="_blank">Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card cat-games" data-cat="games">
+      <div class="card-visual">
+        <img src="../gallery/tetris-pretext.jpg" alt="Tetris x Pretext">
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">Tetris x Pretext</span><span class="card-cat">Game</span></div>
+        <span class="card-author">shinichimochizuki</span>
+        <p class="card-desc">Classic Tetris reimagined with Pretext-powered text layout.</p>
+        <div class="card-links">
+          <a href="https://shinichimochizuki.github.io/tetris-pretext/" target="_blank">Play</a>
+          <a href="https://github.com/shinichimochizuki/tetris-pretext" target="_blank">Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card cat-games" data-cat="games">
+      <div class="card-visual">
+        <span class="glyph">5x</span>
+        <span class="icon-label">five demos</span>
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">Somnai Pretext Demos</span><span class="card-cat">Game</span></div>
+        <span class="card-author">somnai-dreams</span>
+        <p class="card-desc">Five polished demos: editorial engine, fluid smoke ASCII, justification comparison.</p>
+        <div class="card-links">
+          <a href="https://somnai-dreams.github.io/pretext-demos/" target="_blank">Live demo</a>
+          <a href="https://github.com/somnai-dreams/pretext-demos" target="_blank">Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card cat-games" data-cat="games">
+      <div class="card-visual">
+        <span class="glyph">11</span>
+        <span class="icon-label">experiments</span>
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">PreText Experiments</span><span class="card-cat">Game</span></div>
+        <span class="card-author">qtakmalay</span>
+        <p class="card-desc">Eleven demos including Dragon animation, Anime Walk, Masonry layout, and more.</p>
+        <div class="card-links">
+          <a href="https://github.com/qtakmalay/PreTextExperiments" target="_blank">Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ═══ Visual & Interaction ═══ -->
+    <article class="card cat-visual" data-cat="visual">
+      <div class="card-visual">
+        <span class="glyph">&#x1f4a5;</span>
+        <span class="icon-label">particles</span>
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">Pretext Explosive</span><span class="card-cat">Visual</span></div>
+        <span class="card-author">SamiKamal</span>
+        <p class="card-desc">Text that shatters into particles with explosive effects powered by Pretext layout.</p>
+        <div class="card-links">
+          <a href="https://github.com/SamiKamal/pretext-explosive" target="_blank">Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card cat-visual" data-cat="visual">
+      <div class="card-visual">
+        <span class="glyph">SW</span>
+        <span class="icon-label">perspective</span>
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">Star Wars Crawl</span><span class="card-cat">Visual</span></div>
+        <span class="card-author">berryboylb</span>
+        <p class="card-desc">The iconic opening crawl recreated with perspective text animation.</p>
+        <div class="card-links">
+          <a href="https://github.com/berryboylb/star-wars-pretext-demo" target="_blank">Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card cat-visual" data-cat="visual">
+      <div class="card-visual">
+        <span class="glyph">&#x25CF;</span>
+        <span class="icon-label">black hole</span>
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">Singularity & Liquid Grid</span><span class="card-cat">Visual</span></div>
+        <span class="card-author">progrmoiz</span>
+        <p class="card-desc">Black-hole text singularity, liquid dashboard grid, and draw-to-fill text vessels.</p>
+        <div class="card-links">
+          <a href="https://github.com/progrmoiz/pretext-demos" target="_blank">Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card cat-visual" data-cat="visual">
+      <div class="card-visual">
+        <span class="glyph">&#x2725;</span>
+        <span class="icon-label">reflow</span>
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">Drag Sprite Reflow</span><span class="card-cat">Visual</span></div>
+        <span class="card-author">dokobot</span>
+        <p class="card-desc">Drag a sprite across text and watch paragraphs reflow in real time.</p>
+        <div class="card-links">
+          <a href="https://github.com/dokobot/pretext-demo" target="_blank">Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card cat-visual" data-cat="visual">
+      <div class="card-visual">
+        <span class="glyph">&ldquo;&rdquo;</span>
+        <span class="icon-label">responsive</span>
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">Responsive Testimonials</span><span class="card-cat">Visual</span></div>
+        <span class="card-author">jalada</span>
+        <p class="card-desc">Auto-sizing testimonial quotes that adapt to container width.</p>
+        <div class="card-links">
+          <a href="https://github.com/jalada/pretext-demo" target="_blank">Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card cat-visual" data-cat="visual">
+      <div class="card-visual">
+        <span class="glyph">&#x23F0;</span>
+        <span class="icon-label">editorial</span>
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">Alarmy Editorial Clock</span><span class="card-cat">Visual</span></div>
+        <span class="card-author">SmisLee</span>
+        <p class="card-desc">Multi-column editorial layout flowing around an animated analog clock.</p>
+        <div class="card-links">
+          <a href="https://github.com/SmisLee/alarmy-pretext-demo" target="_blank">Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ═══ Experiments ═══ -->
+    <article class="card cat-experiment" data-cat="experiment">
+      <div class="card-visual">
+        <img src="../gallery/illustrated-manuscript.jpg" alt="Illustrated Manuscript">
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">Illustrated Manuscript</span><span class="card-cat">Experiment</span></div>
+        <span class="card-author">dengshu2</span>
+        <p class="card-desc">Medieval illuminated manuscript with animated dragon and live text reflow.</p>
+        <div class="card-links">
+          <a href="https://illustrated-manuscript.vercel.app/" target="_blank">Live demo</a>
+          <a href="https://github.com/dengshu2/illustrated-manuscript" target="_blank">Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card cat-experiment" data-cat="experiment">
+      <div class="card-visual">
+        <span class="glyph">&#x00B6;</span>
+        <span class="icon-label">text flow</span>
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">Text Flow Demo</span><span class="card-cat">Experiment</span></div>
+        <span class="card-author">MaiMcdull</span>
+        <p class="card-desc">News-style flowing text layout with a comparison shim for benchmarking.</p>
+        <div class="card-links">
+          <a href="https://github.com/MaiMcdull/pretext-text-flow-demo" target="_blank">Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card cat-experiment" data-cat="experiment">
+      <div class="card-visual">
+        <span class="glyph">&#x224B;</span>
+        <span class="icon-label">waves</span>
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">Sea of Words</span><span class="card-cat">Experiment</span></div>
+        <span class="card-author">Mukul-svg</span>
+        <p class="card-desc">Words flowing as ocean waves with wrap geometry in a canvas scene.</p>
+        <div class="card-links">
+          <a href="https://github.com/Mukul-svg/sea-of-words" target="_blank">Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card cat-experiment" data-cat="experiment">
+      <div class="card-visual">
+        <span class="glyph">&#x1F310;</span>
+        <span class="icon-label">world model</span>
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">World Model Test</span><span class="card-cat">Experiment</span></div>
+        <span class="card-author">CharlieGreenman</span>
+        <p class="card-desc">Minimal world-model interface powered by DOM-free text measurement.</p>
+        <div class="card-links">
+          <a href="https://github.com/CharlieGreenman/world-model-test" target="_blank">Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card cat-experiment" data-cat="experiment">
+      <div class="card-visual">
+        <span class="glyph">&#x1F9D1;</span>
+        <span class="icon-label">face tracking</span>
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">Face x Pretext</span><span class="card-cat">Experiment</span></div>
+        <span class="card-author">sachinkasana</span>
+        <p class="card-desc">TensorFlow.js face tracking drives real-time Pretext typography.</p>
+        <div class="card-links">
+          <a href="https://github.com/sachinkasana/pretext-demo" target="_blank">Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card cat-experiment" data-cat="experiment">
+      <div class="card-visual">
+        <span class="glyph">&#x26A1;</span>
+        <span class="icon-label">benchmark</span>
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">DOM vs Pretext</span><span class="card-cat">Experiment</span></div>
+        <span class="card-author">clawsuo-web</span>
+        <p class="card-desc">Side-by-side performance comparison between DOM layout and Pretext.</p>
+        <div class="card-links">
+          <a href="https://github.com/clawsuo-web/pretext-demo" target="_blank">Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ═══ Emerging ═══ -->
+    <article class="card cat-emerging" data-cat="emerging">
+      <div class="card-visual">
+        <span class="glyph">&#x266B;</span>
+        <span class="icon-label">drum machine</span>
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">TypeBeat</span><span class="card-cat">Emerging</span></div>
+        <span class="card-author">Alexander Chen</span>
+        <p class="card-desc">A drum machine entirely made of text. Each character triggers a sound. Built with Pretext + Gemini.</p>
+        <div class="card-links">
+          <a href="https://x.com/alexanderchen/status/2038727366734987763" target="_blank">X post</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card cat-emerging" data-cat="emerging">
+      <div class="card-visual">
+        <span class="glyph">Aa</span>
+        <span class="icon-label">kinetic type</span>
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">Typexperiments</span><span class="card-cat">Emerging</span></div>
+        <span class="card-author">pablostanley</span>
+        <p class="card-desc">Kinetic typography engine with smooth per-character text animations on Canvas.</p>
+        <div class="card-links">
+          <a href="https://github.com/pablostanley/typexperiments" target="_blank">Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card cat-emerging" data-cat="emerging">
+      <div class="card-visual">
+        <span class="glyph">52</span>
+        <span class="icon-label">biomarkers</span>
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">BioMap</span><span class="card-cat">Emerging</span></div>
+        <span class="card-author">Kevin Ho</span>
+        <p class="card-desc">52 biomarker blocks that expand and reflow text every frame. 0.04ms for all 52 layouts.</p>
+        <div class="card-links">
+          <a href="https://x.com/kho/status/2038160195571102068" target="_blank">X post</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card cat-emerging" data-cat="emerging">
+      <div class="card-visual">
+        <span class="glyph">&#x2694;</span>
+        <span class="icon-label">space game</span>
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">Pretext Wars</span><span class="card-cat">Emerging</span></div>
+        <span class="card-author">jameslcowan</span>
+        <p class="card-desc">Space-themed game where you destroy poetry with your spaceship.</p>
+        <div class="card-links">
+          <a href="https://github.com/jameslcowan/pretext-wars" target="_blank">Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card cat-emerging" data-cat="emerging">
+      <div class="card-visual">
+        <span class="glyph">&#x25A0;</span>
+        <span class="icon-label">slides</span>
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">Pretext Slides</span><span class="card-cat">Emerging</span></div>
+        <span class="card-author">ShipItAndPray</span>
+        <p class="card-desc">Presentation tool rendering slides in Canvas with Pretext. Write markdown, present anywhere.</p>
+        <div class="card-links">
+          <a href="https://github.com/ShipItAndPray/pretext-slides" target="_blank">Repo</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card cat-emerging" data-cat="emerging">
+      <div class="card-visual">
+        <span class="glyph">&#x2699;</span>
+        <span class="icon-label">playground</span>
+      </div>
+      <div class="card-body">
+        <div class="card-top-row"><span class="card-title">Pretext Lab</span><span class="card-cat">Emerging</span></div>
+        <span class="card-author">XergioAleX</span>
+        <p class="card-desc">Interactive playground with drag-to-resize, masonry grids, chat bubbles, text flow around shapes.</p>
+        <div class="card-links">
+          <a href="https://pretext.xergioalex.com/" target="_blank">Live demo</a>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="site-footer">
+    <a href="https://github.com/bluedusk/awesome-pretext">awesome-pretext</a> &middot;
+    Pretext by <a href="https://github.com/chenglou">Cheng Lou</a> &middot;
+    CC0 1.0
+  </footer>
+
+  <script>
+    // ── Filter logic ──
+    const pills = document.querySelectorAll('.filter-pill');
+    const cards = document.querySelectorAll('.card');
+    const badge = document.getElementById('count-badge');
+
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => p.setAttribute('aria-pressed', 'false'));
+        pill.setAttribute('aria-pressed', 'true');
+
+        const filter = pill.dataset.filter;
+        let visible = 0;
+
+        cards.forEach(card => {
+          const show = filter === 'all' || card.dataset.cat === filter;
+          card.dataset.hidden = show ? 'false' : 'true';
+          if (show) visible++;
+        });
+
+        badge.textContent = visible + (visible === 1 ? ' demo' : ' demos');
+      });
+    });
+  </script>
+
+</body>
+</html>

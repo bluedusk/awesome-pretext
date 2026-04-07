@@ -92,6 +92,10 @@ Last auto-updated: 2026-04-06 (via `/awesome-pretext-update`)
   </tr>
 </table>
 
+<p align="center">
+  <b><a href="https://bluedusk.github.io/awesome-pretext/gallery.html">View full gallery (26+ demos) &rarr;</a></b>
+</p>
+
 ---
 
 ## Demos
