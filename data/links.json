@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-06T08:00:00Z",
+  "last_updated": "2026-04-12T08:00:00Z",
   "links": [
     {
       "url": "https://github.com/pablostanley/typexperiments",
@@ -232,6 +232,69 @@
       "stars": 2,
       "added_at": "2026-04-06",
       "score": 5.5,
+      "decision": "review"
+    },
+    {
+      "url": "https://aiia.ro/blog/cheng-lou-launches-pretext-javascript-library-multiline-text-measurement/",
+      "title": "I Built a Dragon That Parts Text Like Water — How Pretext Makes It Possible",
+      "description": "Full code walkthrough of building the viral Dragon Through Text demo with Pretext.",
+      "source": "web",
+      "category": "article",
+      "added_at": "2026-04-12",
+      "score": 6.55,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/Munimap/snake_words",
+      "title": "Munimap/snake_words",
+      "description": "Snake game built with Pretext text layout.",
+      "source": "github",
+      "category": "demo",
+      "stars": 0,
+      "added_at": "2026-04-12",
+      "score": 5.0,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/bmanzzs/Ascii-Airlines",
+      "title": "bmanzzs/Ascii-Airlines",
+      "description": "Pretext demo — Ascii Airlines themed text layout showcase.",
+      "source": "github",
+      "category": "demo",
+      "stars": 0,
+      "added_at": "2026-04-12",
+      "score": 5.15,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/mstupp1/Pretext-Game",
+      "title": "mstupp1/Pretext-Game",
+      "description": "A game built with the Pretext text layout library.",
+      "source": "github",
+      "category": "demo",
+      "stars": 1,
+      "added_at": "2026-04-12",
+      "score": 5.1,
+      "decision": "review"
+    },
+    {
+      "url": "https://x.com/RohanJhunja/status/2039456728908214437",
+      "title": "Shape-fitting typewriter demo",
+      "description": "Creative demo fitting typed text into arbitrary shapes using Pretext layout.",
+      "source": "x",
+      "category": "demo",
+      "added_at": "2026-04-12",
+      "score": 5.5,
+      "decision": "review"
+    },
+    {
+      "url": "https://www.innovatrixinfotech.com/blog/pretext-cheng-lou-15kb-library-rewriting-web-text-layout",
+      "title": "Pretext by Cheng Lou: The 15KB Library Rewriting Web Text Layout",
+      "description": "Innovatrix Infotech overview of Pretext features and significance.",
+      "source": "web",
+      "category": "article",
+      "added_at": "2026-04-12",
+      "score": 5.35,
       "decision": "review"
     }
   ]
