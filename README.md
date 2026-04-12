@@ -21,7 +21,7 @@
 
 > Pretext is a 15KB, zero-dependency TypeScript library that measures and positions text using Canvas with pure-arithmetic reflows. No DOM, no WASM — just math.
 
-Last auto-updated: 2026-04-06 (via `/awesome-pretext-update`)
+Last auto-updated: 2026-04-12 (via `/awesome-pretext-update`)
 
 ## Contents
 
@@ -353,7 +353,7 @@ Key coverage:
 
 ### Milestones
 
-- **35,000+ stars** on GitHub (as of April 2026)
+- **42,500+ stars** on GitHub (as of April 2026)
 - Built using AI-assisted development (Claude + Codex), trained for weeks on browser ground truth
 - 18+ community demos from independent developers within days of launch
 
