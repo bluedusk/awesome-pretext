@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-12T08:00:00Z",
+  "last_updated": "2026-04-18T08:00:00Z",
   "links": [
     {
       "url": "https://github.com/pablostanley/typexperiments",
@@ -48,7 +48,7 @@
       "description": "Nim WASM port of pretext text layout engine — up to 9.5x faster than JS.",
       "source": "github",
       "category": "community-project",
-      "stars": 0,
+      "stars": 1,
       "added_at": "2026-04-03",
       "score": 5.8,
       "decision": "review"
@@ -70,7 +70,7 @@
       "description": "Space-themed interactive showcase — destroy poetry with your spaceship.",
       "source": "github",
       "category": "demo",
-      "stars": 0,
+      "stars": 1,
       "added_at": "2026-04-03",
       "score": 5.2,
       "decision": "review"
@@ -99,10 +99,10 @@
     {
       "url": "https://news.ycombinator.com/item?id=47556290",
       "title": "Pretext: TypeScript library for multiline text measurement",
-      "description": "Main HN launch thread. 388 points, 70 comments.",
+      "description": "Main HN launch thread. 397 points, 70 comments.",
       "source": "hackernews",
       "category": "article",
-      "points": 388,
+      "points": 397,
       "comments": 70,
       "added_at": "2026-04-03",
       "score": 9.0,
@@ -218,7 +218,7 @@
       "description": "React hooks that predict text height before render using Pretext. Show HN with 8 points.",
       "source": "github",
       "category": "community-project",
-      "stars": 0,
+      "stars": 1,
       "added_at": "2026-04-06",
       "score": 6.0,
       "decision": "review"
@@ -295,6 +295,197 @@
       "category": "article",
       "added_at": "2026-04-12",
       "score": 5.35,
+      "decision": "review"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=VaA3o4ZHDaY",
+      "title": "Everyone's Talking About Pretext (And Here's Why)",
+      "description": "YouTube explainer covering why DOM-free text layout matters and how Pretext achieves it.",
+      "source": "youtube",
+      "category": "video",
+      "added_at": "2026-04-18",
+      "score": 8.2,
+      "decision": "include"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=CUAuy5SWJcw",
+      "title": "pretext is a bigger deal than you think",
+      "description": "Deep dive into why escaping DOM reflow changes the web platform.",
+      "source": "youtube",
+      "category": "video",
+      "added_at": "2026-04-18",
+      "score": 7.8,
+      "decision": "include"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=vd14EElCRvs",
+      "title": "He just crawled through hell to fix the browser…",
+      "description": "The story of Cheng Lou's journey building Pretext at Midjourney.",
+      "source": "youtube",
+      "category": "video",
+      "added_at": "2026-04-18",
+      "score": 7.2,
+      "decision": "include"
+    },
+    {
+      "url": "https://github.com/codexiaoke/agentdown",
+      "title": "codexiaoke/agentdown",
+      "description": "Vue 3 agent-native markdown UI runtime combining markdown-it + @chenglou/pretext + AGUI protocol.",
+      "source": "github",
+      "category": "community-project",
+      "stars": 8,
+      "added_at": "2026-04-18",
+      "score": 6.9,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/NourTheArab/pretext-flow",
+      "title": "NourTheArab/pretext-flow",
+      "description": "Abstraction layer for @chenglou/pretext — flow text around circles, rectangles, ellipses, polygons at 60fps.",
+      "source": "github",
+      "category": "community-project",
+      "stars": 2,
+      "added_at": "2026-04-18",
+      "score": 6.25,
+      "decision": "review"
+    },
+    {
+      "url": "https://medium.com/@creativeaininja/pretext-the-15kb-library-that-bypasses-your-browsers-most-expensive-operation-7427af268d2c",
+      "title": "Pretext: The 15KB Library That Bypasses Your Browser's Most Expensive Operation",
+      "description": "Kristopher Dunham on Medium — overview of how Pretext works and why it matters.",
+      "source": "web",
+      "category": "article",
+      "added_at": "2026-04-18",
+      "score": 6.95,
+      "decision": "review"
+    },
+    {
+      "url": "https://www.cloudmagazin.com/en/2026/03/30/pretext-solving-the-30-year-browser-problem-or-just-hype/",
+      "title": "Pretext: Solving the 30-Year Browser Problem or Just Hype?",
+      "description": "Balanced critical analysis of Pretext's claims and real-world applicability.",
+      "source": "web",
+      "category": "article",
+      "added_at": "2026-04-18",
+      "score": 6.3,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/ketanvelip/unwritten",
+      "title": "ketanvelip/unwritten",
+      "description": "Top-down arena combat game where enemies are text paragraphs, built with @chenglou/pretext.",
+      "source": "github",
+      "category": "demo",
+      "stars": 0,
+      "added_at": "2026-04-18",
+      "score": 6.2,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/shimabox/vertical-text-flow-demo",
+      "title": "shimabox/vertical-text-flow-demo",
+      "description": "Vertical text flow demo (縦書き) built with @chenglou/pretext.",
+      "source": "github",
+      "category": "demo",
+      "stars": 0,
+      "added_at": "2026-04-18",
+      "score": 5.85,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/haoyangli16/tianqing",
+      "title": "haoyangli16/tianqing",
+      "description": "诗·机 — Unitree G1 humanoid robot textured with flowing multilingual poetry, powered by @chenglou/pretext.",
+      "source": "github",
+      "category": "demo",
+      "stars": 0,
+      "added_at": "2026-04-18",
+      "score": 5.75,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/SwayamMehta10/bijuu-mode-typography",
+      "title": "SwayamMehta10/bijuu-mode-typography",
+      "description": "Type text and render it as a Naruto Tailed Beast silhouette via @chenglou/pretext per-line variable-width layout.",
+      "source": "github",
+      "category": "demo",
+      "stars": 0,
+      "added_at": "2026-04-18",
+      "score": 5.8,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/skastr0/pretext-skia",
+      "title": "skastr0/pretext-skia",
+      "description": "Fork of chenglou/pretext adapted for Expo and Skia (React Native).",
+      "source": "github",
+      "category": "community-project",
+      "stars": 0,
+      "added_at": "2026-04-18",
+      "score": 5.65,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/Poojan38380/pretext-projects",
+      "title": "Poojan38380/pretext-projects",
+      "description": "8 text-driven Canvas experiments: fluid sims, physics narratives, generative ASCII art, editorial layouts.",
+      "source": "github",
+      "category": "demo",
+      "stars": 0,
+      "added_at": "2026-04-18",
+      "score": 6.2,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/1sh22/pretex",
+      "title": "1sh22/pretex",
+      "description": "Typographic ASCII renderer with generative, camera, and editorial modes. Built on @chenglou/pretext.",
+      "source": "github",
+      "category": "demo",
+      "stars": 1,
+      "added_at": "2026-04-18",
+      "score": 6.35,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/ShipItAndPray/pretext-canvas",
+      "title": "ShipItAndPray/pretext-canvas",
+      "description": "Canvas and WebGL text rendering helpers powered by Pretext.",
+      "source": "github",
+      "category": "community-project",
+      "stars": 0,
+      "added_at": "2026-04-18",
+      "score": 5.3,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/lucianfialho/eatext",
+      "title": "lucianfialho/eatext",
+      "description": "Mobile teleprompter PWA built with pretext + Canvas. Zero dependencies, offline-first.",
+      "source": "github",
+      "category": "demo",
+      "stars": 0,
+      "added_at": "2026-04-18",
+      "score": 5.6,
+      "decision": "review"
+    },
+    {
+      "url": "https://www.youtube.com/shorts/mUpOa3bp4P8",
+      "title": "Pretext: bypassing the DOM for text (Short)",
+      "description": "YouTube Short explaining how Pretext bypasses the DOM for text measurement.",
+      "source": "youtube",
+      "category": "video",
+      "added_at": "2026-04-18",
+      "score": 6.0,
+      "decision": "review"
+    },
+    {
+      "url": "https://www.youtube.com/shorts/CFzASrSBcFg",
+      "title": "This new pretext javascript algorithm is a CSS killer (Short)",
+      "description": "YouTube Short on Pretext as a CSS alternative for text layout.",
+      "source": "youtube",
+      "category": "video",
+      "added_at": "2026-04-18",
+      "score": 5.8,
       "decision": "review"
     }
   ]
