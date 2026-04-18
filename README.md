@@ -166,6 +166,7 @@ High-star GitHub projects built with or extending Pretext. Star counts and activ
 | [pretext-video](https://github.com/fifteen42/pretext-video) | ![Stars](https://img.shields.io/github/stars/fifteen42/pretext-video?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/fifteen42/pretext-video?style=flat-square) | Webcam into living typography via Pretext + MediaPipe |
 | [pretext-playground](https://github.com/0xNyk/pretext-playground) | ![Stars](https://img.shields.io/github/stars/0xNyk/pretext-playground?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/0xNyk/pretext-playground?style=flat-square) | Interactive ASCII dragon playground with physics |
 | [pretext-demos](https://github.com/somnai-dreams/pretext-demos) | ![Stars](https://img.shields.io/github/stars/somnai-dreams/pretext-demos?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/somnai-dreams/pretext-demos?style=flat-square) | Five polished layout engine demos |
+| [jalco-ui](https://github.com/jal-co/ui) | ![Stars](https://img.shields.io/github/stars/jal-co/ui?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/jal-co/ui?style=flat-square) | Shadcn-compatible React component registry with Pretext text-measurement hooks, Pretext Chat Bubble, Pretext Balanced Text, and Pretext Masonry Grid |
 
 ### Emerging Projects
 
