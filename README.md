@@ -21,7 +21,7 @@
 
 > Pretext is a 15KB, zero-dependency TypeScript library that measures and positions text using Canvas with pure-arithmetic reflows. No DOM, no WASM — just math.
 
-Last auto-updated: 2026-04-12 (via `/awesome-pretext-update`)
+Last auto-updated: 2026-04-18 (via `/awesome-pretext-update`)
 
 ## Contents
 
@@ -250,6 +250,9 @@ High-star GitHub projects built with or extending Pretext. Star counts and activ
 <!-- VIDEOS_AUTO_START -->
 - [Kirupa Podcast: Cheng Lou on Text Layout](https://x.com/kirupa/status/2038321938624651679) — Podcast interview where Cheng Lou discusses his passion for text layout and the thinking behind Pretext.
 - [TypeBeat — drum machine from text](https://x.com/alexanderchen/status/2038727366734987763) — Alexander Chen's demo with sound. Built with Pretext + Gemini.
+- [Everyone's Talking About Pretext (And Here's Why)](https://www.youtube.com/watch?v=VaA3o4ZHDaY) — YouTube explainer covering why DOM-free text layout matters and how Pretext achieves it.
+- [pretext is a bigger deal than you think](https://www.youtube.com/watch?v=CUAuy5SWJcw) — Deep dive into why escaping DOM reflow changes the web platform.
+- [He just crawled through hell to fix the browser…](https://www.youtube.com/watch?v=vd14EElCRvs) — The story of Cheng Lou's journey building Pretext at Midjourney.
 <!-- VIDEOS_AUTO_END -->
 
 ---
