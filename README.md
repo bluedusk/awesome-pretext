@@ -21,7 +21,7 @@
 
 > Pretext is a 15KB, zero-dependency TypeScript library that measures and positions text using Canvas with pure-arithmetic reflows. No DOM, no WASM — just math.
 
-Last auto-updated: 2026-04-18 (via `/awesome-pretext-update`)
+Last auto-updated: 2026-05-03 (via `/awesome-pretext-update`)
 
 ## Contents
 
@@ -117,6 +117,7 @@ Last auto-updated: 2026-04-18 (via `/awesome-pretext-update`)
 | **Drag Sprite Reflow** | dokobot | Drag a sprite across text and watch paragraphs reflow in real time | [![GitHub](https://img.shields.io/github/stars/dokobot/pretext-demo?style=flat-square)](https://github.com/dokobot/pretext-demo) |
 | **Responsive Testimonials** | jalada | Auto-sizing testimonial quotes that adapt to container width | [![GitHub](https://img.shields.io/github/stars/jalada/pretext-demo?style=flat-square)](https://github.com/jalada/pretext-demo) |
 | **Alarmy Editorial Clock** | SmisLee | Multi-column editorial layout flowing around an animated analog clock | [![GitHub](https://img.shields.io/github/stars/SmisLee/alarmy-pretext-demo?style=flat-square)](https://github.com/SmisLee/alarmy-pretext-demo) |
+| **Pretext Interactive Media Art** | khj68 | 23 cursor-driven canvas effects — dragon, black hole, Pac-Man, fire, rain, magnet, vine, lightning, and more | [![GitHub](https://img.shields.io/github/stars/khj68/pretext-example?style=flat-square)](https://github.com/khj68/pretext-example) |
 
 ### Experiments
 
@@ -140,6 +141,7 @@ Last auto-updated: 2026-04-18 (via `/awesome-pretext-update`)
 | **Pretext Wars** | jameslcowan | Space-themed game — destroy poetry with your spaceship | [![GitHub](https://img.shields.io/github/stars/jameslcowan/pretext-wars?style=flat-square)](https://github.com/jameslcowan/pretext-wars) |
 | **Pretext Slides** | ShipItAndPray | Presentation tool rendering slides in Canvas with Pretext — write markdown, present anywhere | [![GitHub](https://img.shields.io/github/stars/ShipItAndPray/pretext-slides?style=flat-square)](https://github.com/ShipItAndPray/pretext-slides) |
 | **Pretext Lab** | XergioAleX | Interactive playground — drag width sliders, masonry grids, chat bubbles, text flow around shapes | [site](https://pretext.xergioalex.com/) |
+| **Text-Over-Video Placement** | Zalmay Karimi | Upload an MP4, pause on a frame, and place text into dark silhouette areas of the video — The Matrix is the headline example | [site](https://pretext.zkarimi.com/) |
 <!-- DEMOS_AUTO_END -->
 
 ### Live Demos
@@ -167,6 +169,10 @@ High-star GitHub projects built with or extending Pretext. Star counts and activ
 | [pretext-playground](https://github.com/0xNyk/pretext-playground) | ![Stars](https://img.shields.io/github/stars/0xNyk/pretext-playground?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/0xNyk/pretext-playground?style=flat-square) | Interactive ASCII dragon playground with physics |
 | [pretext-demos](https://github.com/somnai-dreams/pretext-demos) | ![Stars](https://img.shields.io/github/stars/somnai-dreams/pretext-demos?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/somnai-dreams/pretext-demos?style=flat-square) | Five polished layout engine demos |
 | [jalco-ui](https://github.com/jal-co/ui) | ![Stars](https://img.shields.io/github/stars/jal-co/ui?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/jal-co/ui?style=flat-square) | Shadcn-compatible React component registry with Pretext text-measurement hooks, Pretext Chat Bubble, Pretext Balanced Text, and Pretext Masonry Grid |
+| [expo-pretext](https://github.com/JubaKitiashvili/expo-pretext) | ![Stars](https://img.shields.io/github/stars/JubaKitiashvili/expo-pretext?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/JubaKitiashvili/expo-pretext?style=flat-square) | React Native / Expo / Web port — native TextKit/TextPaint measurement + ~0.0002ms JS layout. FlashList, streaming AI chat, pinch-to-zoom, Dynamic Type |
+| [PretextSharp](https://github.com/wieslawsoltes/PretextSharp) | ![Stars](https://img.shields.io/github/stars/wieslawsoltes/PretextSharp?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/wieslawsoltes/PretextSharp?style=flat-square) | .NET / C# port for SkiaSharp UIs — grapheme-aware wrapping, locale segmentation, bidi, DirectWrite/FreeType/CoreText backends |
+| [masonry-gridlanes-wc](https://github.com/schalkneethling/masonry-gridlanes-wc) | ![Stars](https://img.shields.io/github/stars/schalkneethling/masonry-gridlanes-wc?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/schalkneethling/masonry-gridlanes-wc?style=flat-square) | Light-DOM custom element for CSS Grid Lanes masonry with JS fallback; Pretext helpers exported separately for headless text metrics |
+| [fitbox](https://github.com/darkroomengineering/fitbox) | ![Stars](https://img.shields.io/github/stars/darkroomengineering/fitbox?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/darkroomengineering/fitbox?style=flat-square) | Reflow-free text-to-box fitting for React. `useFit` hook, `<FitText>` component, static CSS `clamp()` generator, SSR support |
 
 ### Emerging Projects
 
@@ -177,6 +183,10 @@ High-star GitHub projects built with or extending Pretext. Star counts and activ
 | [nim-pretext](https://github.com/jasagiri/nim-pretext) | ![Stars](https://img.shields.io/github/stars/jasagiri/nim-pretext?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/jasagiri/nim-pretext?style=flat-square) | Nim WASM port of Pretext — up to 9.5x faster than JS |
 | [pretext-php](https://github.com/mateffy/pretext-php) | ![Stars](https://img.shields.io/github/stars/mateffy/pretext-php?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/mateffy/pretext-php?style=flat-square) | PHP port with ICU segmentation and injectable font measurement |
 | [pretext_dart](https://github.com/craigm26/pretext_dart) | ![Stars](https://img.shields.io/github/stars/craigm26/pretext_dart?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/craigm26/pretext_dart?style=flat-square) | Dart/Flutter port — pure-arithmetic multiline text layout |
+| [tangentflow](https://github.com/bibin765/tangentflow) | ![Stars](https://img.shields.io/github/stars/bibin765/tangentflow?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/bibin765/tangentflow?style=flat-square) | Browser PDF document builder powered by Pretext for pixel-perfect text wrapping |
+| [vite-pretext](https://github.com/BALOTIAS/vite-pretext) | ![Stars](https://img.shields.io/github/stars/BALOTIAS/vite-pretext?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/BALOTIAS/vite-pretext?style=flat-square) | Zero-config Vite plugin — eliminates text-based CLS via Web-Worker text measurement |
+| [preimage](https://github.com/somnai-dreams/preimage) | ![Stars](https://img.shields.io/github/stars/somnai-dreams/preimage?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/somnai-dreams/preimage?style=flat-square) | Image counterpart to Pretext — measure & lay out images with the same prepare/layout split |
+| [virtual-text-layout](https://github.com/nikilok/virtual-text-layout) | ![Stars](https://img.shields.io/github/stars/nikilok/virtual-text-layout?style=flat-square) | ![Last commit](https://img.shields.io/github/last-commit/nikilok/virtual-text-layout?style=flat-square) | React hook replacing `measureElement` for `@tanstack/react-virtual` with canvas measurement |
 <!-- PROJECTS_AUTO_END -->
 
 ---
@@ -217,6 +227,7 @@ High-star GitHub projects built with or extending Pretext. Star counts and activ
 
 ## Articles & Blog Posts
 
+- [InfoQ: Pretext.js Bypasses DOM Layout Reflow at 120 FPS](https://www.infoq.com/news/2026/04/pretext-js-120fps-text-layout/) — Bruno Couriol's analysis of the prepare/layout split and how it enables masonry, infinite lists, and scroll anchoring at 60-120 fps.
 - [You're Looking at the Wrong Pretext Demo](https://dev.to/denodell/youre-looking-at-the-wrong-pretext-demo-4960) — Den Odell argues the real innovation is predicting text height without DOM, not the flashy canvas demos.
 - [Cheng Lou's Pretext and the Case for Reactive Surface Layout as a New Graphics Primitive](https://medium.com/@SeloSlav/weft-and-the-case-for-reactive-surface-layout-as-a-new-graphics-primitive-040cf477e31e) — Martin Erlic on Pretext as a new graphics primitive.
 - [Pretext Does What CSS Can't](https://hackernoon.com/pretext-does-what-css-cant-measuring-text-before-the-dom-even-exists) — HackerNoon deep dive into measuring text before the DOM exists.
@@ -231,10 +242,12 @@ High-star GitHub projects built with or extending Pretext. Star counts and activ
 ### Latest Articles
 
 <!-- ARTICLES_AUTO_START -->
+- [InfoQ: Pretext.js Bypasses DOM Layout Reflow, Enabling 120 FPS UX Patterns](https://www.infoq.com/news/2026/04/pretext-js-120fps-text-layout/) — Bruno Couriol, April 20, 2026.
 - [The Story Behind the Fastest JavaScript Text Layout Engine](https://pretextjs.dev/blog/chenglou-pretext) — Deep dive into Cheng Lou's journey building Pretext.
 - [Accessible Pretext Demo](https://dev.to/micaavigliano/accessible-pretext-demo-1492) — Building an accessible demo with Pretext on DEV.to.
+- [Discovering pretext in a fun way](https://dev.to/soloiaros/discovering-the-pretext-in-a-fun-way-20h5) — Yaroslav Solovev pairs pretext with Three.js + a rigged Blender goose that follows the cursor.
 - [The future of text layout is not CSS](https://chenglou.me/pretext/editorial-engine/) (HN, 16 pts, 19 comments) — Cheng Lou's editorial engine demo that sparked discussion on userland layout.
-- [Pretext: TypeScript library for multiline text measurement](https://news.ycombinator.com/item?id=47556290) (HN, 390 pts, 70 comments) — The main launch thread on Hacker News.
+- [Pretext: TypeScript library for multiline text measurement](https://news.ycombinator.com/item?id=47556290) (HN, 397 pts, 70 comments) — The main launch thread on Hacker News.
 <!-- ARTICLES_AUTO_END -->
 
 ---
@@ -276,6 +289,11 @@ Pretext is framework-agnostic — it works identically in any JavaScript environ
 - [textura](https://github.com/razroo/textura) — Pretext x Yoga integration for full DOM-free layout (Flex, Grid, etc.)
 - [swift-pretextkit](https://github.com/tornikegomareli/swift-pretextkit) — Swift port for Apple platforms (iOS, macOS)
 - [layout-sans](https://github.com/BaselAshraf81/layout-sans) — Pure TypeScript 2D layout engine built on Pretext
+- [expo-pretext](https://github.com/JubaKitiashvili/expo-pretext) — React Native / Expo port with native iOS TextKit and Android TextPaint backends
+- [PretextSharp](https://github.com/wieslawsoltes/PretextSharp) — .NET / C# port for SkiaSharp UIs with DirectWrite, FreeType, and CoreText backends
+- [fitbox](https://github.com/darkroomengineering/fitbox) — React text-to-box fitting built on Pretext (`useFit`, `<FitText>`, static `clamp()` generator)
+- [vite-pretext](https://github.com/BALOTIAS/vite-pretext) — Vite plugin that runs Pretext measurement off-thread to eliminate text-based CLS
+- [virtual-text-layout](https://github.com/nikilok/virtual-text-layout) — TanStack Virtual hook that swaps `measureElement` for canvas measurement
 
 ---
 
@@ -357,7 +375,7 @@ Key coverage:
 
 ### Milestones
 
-- **42,500+ stars** on GitHub (as of April 2026)
+- **46,000+ stars** on GitHub (as of May 2026)
 - Built using AI-assisted development (Claude + Codex), trained for weeks on browser ground truth
 - 18+ community demos from independent developers within days of launch
 
