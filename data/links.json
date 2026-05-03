@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-18T08:00:00Z",
+  "last_updated": "2026-05-03T20:00:00Z",
   "links": [
     {
       "url": "https://github.com/pablostanley/typexperiments",
@@ -126,7 +126,7 @@
       "description": "Dart/Flutter port of pretext — pure-arithmetic multiline text layout with variable per-line widths.",
       "source": "github",
       "category": "community-project",
-      "stars": 9,
+      "stars": 8,
       "added_at": "2026-04-04",
       "score": 7.5,
       "decision": "include"
@@ -229,9 +229,9 @@
       "description": "Pure Dart text measurement & layout library for Flutter. Port of chenglou/pretext.",
       "source": "github",
       "category": "community-project",
-      "stars": 2,
+      "stars": 5,
       "added_at": "2026-04-06",
-      "score": 5.5,
+      "score": 5.8,
       "decision": "review"
     },
     {
@@ -344,7 +344,7 @@
       "description": "Abstraction layer for @chenglou/pretext — flow text around circles, rectangles, ellipses, polygons at 60fps.",
       "source": "github",
       "category": "community-project",
-      "stars": 2,
+      "stars": 5,
       "added_at": "2026-04-18",
       "score": 6.25,
       "decision": "review"
@@ -486,6 +486,146 @@
       "category": "video",
       "added_at": "2026-04-18",
       "score": 5.8,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/JubaKitiashvili/expo-pretext",
+      "title": "JubaKitiashvili/expo-pretext",
+      "description": "React Native / Expo / Web port of Pretext. Native TextKit/TextPaint measurement + ~0.0002ms JS layout. FlashList, streaming AI chat, pinch-to-zoom, Dynamic Type. 386 tests, MIT.",
+      "source": "github",
+      "category": "community-project",
+      "stars": 223,
+      "added_at": "2026-05-03",
+      "score": 8.5,
+      "decision": "include"
+    },
+    {
+      "url": "https://github.com/wieslawsoltes/PretextSharp",
+      "title": "wieslawsoltes/PretextSharp",
+      "description": ".NET / C# port of pretext for SkiaSharp UIs. Grapheme-aware wrapping, locale-aware segmentation, bidi, streaming line walking, DirectWrite/FreeType/CoreText backends.",
+      "source": "github",
+      "category": "community-project",
+      "stars": 22,
+      "added_at": "2026-05-03",
+      "score": 7.8,
+      "decision": "include"
+    },
+    {
+      "url": "https://github.com/schalkneethling/masonry-gridlanes-wc",
+      "title": "schalkneethling/masonry-gridlanes-wc",
+      "description": "Light-DOM custom element wrapping CSS Grid Lanes masonry with a JS fallback. Pretext helpers exported separately for headless text metrics on text-heavy cards.",
+      "source": "github",
+      "category": "community-project",
+      "stars": 11,
+      "added_at": "2026-05-03",
+      "score": 7.0,
+      "decision": "include"
+    },
+    {
+      "url": "https://github.com/khj68/pretext-example",
+      "title": "khj68/pretext-example",
+      "description": "23 interactive canvas-based art pieces — dragon, black hole, Pac-Man, fire, rain, magnet, vine, glitch, lightning, and more. Most use pretext for GPU-side text measurement.",
+      "source": "github",
+      "category": "demo",
+      "stars": 8,
+      "added_at": "2026-05-03",
+      "score": 7.2,
+      "decision": "include"
+    },
+    {
+      "url": "https://github.com/darkroomengineering/fitbox",
+      "title": "darkroomengineering/fitbox",
+      "description": "Reflow-free text-to-box fitting for React, built on @chenglou/pretext. useFit hook, <FitText> component, static CSS clamp() generator, SSR support.",
+      "source": "github",
+      "category": "community-project",
+      "stars": 6,
+      "added_at": "2026-05-03",
+      "score": 7.2,
+      "decision": "include"
+    },
+    {
+      "url": "https://www.infoq.com/news/2026/04/pretext-js-120fps-text-layout/",
+      "title": "Pretext.js Bypasses DOM Layout Reflow, Enabling Advanced UX Patterns at 120 FPS",
+      "description": "Bruno Couriol on InfoQ — analysis of pretext's prepare/layout split and how it enables masonry, infinite lists, and scroll anchoring at 60-120 fps. Published April 20, 2026.",
+      "source": "web",
+      "category": "article",
+      "added_at": "2026-05-03",
+      "score": 8.5,
+      "decision": "include"
+    },
+    {
+      "url": "https://github.com/bibin765/tangentflow",
+      "title": "bibin765/tangentflow",
+      "description": "Browser PDF document builder powered by pretext for pixel-perfect text wrapping. 13 block types, CJK/Arabic/emoji support, no headless browser.",
+      "source": "github",
+      "category": "community-project",
+      "stars": 3,
+      "added_at": "2026-05-03",
+      "score": 6.8,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/BALOTIAS/vite-pretext",
+      "title": "BALOTIAS/vite-pretext",
+      "description": "Zero-config Vite plugin that eliminates text-based CLS by delegating measurement to a Web Worker via @chenglou/pretext.",
+      "source": "github",
+      "category": "community-project",
+      "stars": 3,
+      "added_at": "2026-05-03",
+      "score": 6.5,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/somnai-dreams/preimage",
+      "title": "somnai-dreams/preimage",
+      "description": "Image counterpart to pretext — measure and lay out images without DOM reflow. Mirrors pretext's prepare/layout split for the image side.",
+      "source": "github",
+      "category": "community-project",
+      "stars": 2,
+      "added_at": "2026-05-03",
+      "score": 6.8,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/nikilok/virtual-text-layout",
+      "title": "nikilok/virtual-text-layout",
+      "description": "React hook that replaces measureElement with canvas-based text measurement for @tanstack/react-virtual. ~43% style recalc reduction during scroll.",
+      "source": "github",
+      "category": "community-project",
+      "stars": 2,
+      "added_at": "2026-05-03",
+      "score": 6.5,
+      "decision": "review"
+    },
+    {
+      "url": "https://github.com/MushyTaro/pretext-showcase",
+      "title": "MushyTaro/pretext-showcase",
+      "description": "Interactive demo of @chenglou/pretext — text layout without DOM reflow. Supports all languages, emoji, and bidi text.",
+      "source": "github",
+      "category": "demo",
+      "stars": 1,
+      "added_at": "2026-05-03",
+      "score": 5.5,
+      "decision": "review"
+    },
+    {
+      "url": "https://dev.to/soloiaros/discovering-the-pretext-in-a-fun-way-20h5",
+      "title": "Discovering pretext in a fun way",
+      "description": "Yaroslav Solovev on dev.to — interactive demo featuring an animated 3D goose tracking the cursor through a paragraph. Pretext + Three.js + Blender.",
+      "source": "web",
+      "category": "article",
+      "added_at": "2026-05-03",
+      "score": 5.8,
+      "decision": "review"
+    },
+    {
+      "url": "https://pretext.zkarimi.com/",
+      "title": "Position text over videos in real-time",
+      "description": "Zalmay Karimi's demo: upload an MP4, pause on a frame, and place text into dark silhouette areas of the video using @chenglou/pretext. The Matrix is the headline example.",
+      "source": "web",
+      "category": "demo",
+      "added_at": "2026-05-03",
+      "score": 6.5,
       "decision": "review"
     }
   ]
