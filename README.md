@@ -150,6 +150,7 @@ Last auto-updated: 2026-05-03 (via `/awesome-pretext-update`)
 - [Dragon Through Text](https://aiia.ro/pretext/) — The viral dragon animation flowing through paragraphs.
 - [Pretext Breaker](https://pretext-breaker.netlify.app) — Playable Breakout game in the browser.
 - [Pretext Lab](https://pretext.xergioalex.com/) — Interactive playground with drag-to-resize, masonry, chat bubbles, text flow around shapes.
+- [Pretext Resume](https://thenextcv.com/) — Markdown resume to pixel-perfect PDF generator with instant layout previews and customizable print styles.
 
 ---
 
